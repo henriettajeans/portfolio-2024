@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { ThemeContext } from './model/themeContext';
 import './App.scss';
+import { Nav } from './components/navbar/nav';
+import { Footer } from './components/footer/footer';
+import { Outlet } from 'react-router-dom';
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme}`}>
+        <Outlet />
+        <Nav />
+
 
         <div className="App">
           <header className="App-header">
@@ -26,8 +32,11 @@ function App() {
 
           </header>
         </div >
+
+        <Footer />
+
       </div>
-    </ThemeContext.Provider>
+    </ThemeContext.Provider >
 
   );
 }

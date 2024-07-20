@@ -1,4 +1,4 @@
-import '../../styles/themeVariables.scss';
+import '../../styles/header.scss';
 import { FC, useContext } from 'react';
 import { ThemeContext } from '../../model/themeContext';
 
