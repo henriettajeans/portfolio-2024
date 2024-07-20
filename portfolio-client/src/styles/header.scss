@@ -1,0 +1,9 @@
+/** @format */
+@import "mixins.scss";
+@import "themeVariables.scss";
+
+.header {
+  @include themify($themes) {
+    background: themed("headerFooterBackground");
+  }
+}

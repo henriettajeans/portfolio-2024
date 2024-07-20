@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { ThemeContext } from './model/themeContext';
+import './App.scss';
 
 function App() {
+
+
+  // Check the browsers default setting
+  const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const getDefaultTheme = (): string => {
+    const localStorageTheme = localStorage.getItem('default-theme');
+    const browserDefault = isBrowserDefaultDark() ? 'dark' : 'light';
+    return localStorageTheme || browserDefault;
+  };
+  const [theme, setTheme] = useState(getDefaultTheme());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`theme-${theme}`}>
+
+        <div className="App">
+          <header className="App-header">
+            <p>
+              Iäm a little tjejcailler bean.
+            </p>
+
+          </header>
+        </div >
+      </div>
+    </ThemeContext.Provider>
+
   );
 }
 
