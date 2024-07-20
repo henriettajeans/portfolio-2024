@@ -1,6 +1,8 @@
 import '../styles/header.scss';
 import { FC, useContext } from 'react';
 import { ThemeContext } from '../model/themeContext';
+import { Nav } from './nav';
+import logo from "../assets/moon.png";
 
 
 const Header: FC = () => {
@@ -12,9 +14,10 @@ const Header: FC = () => {
     };
     return (
         <header className="header">
+            <Nav />
             <div className="header-content">
                 <a href="/" className="logo-section">
-                    <img src="https://cdn4.iconfinder.com/data/icons/materia-flat-multimedia-vol-1/24/007_006_brightness_low_small_sun-1024.png" alt="logo" />
+                    <img src={logo} className='logo' alt="logo" />
                     <span>Light/Dark mode app</span>
                 </a>
                 <div className="toggle-btn-section">

@@ -4,6 +4,7 @@ import './App.scss';
 import { Nav } from './components/nav';
 import { Footer } from './components/footer';
 import { Outlet } from 'react-router-dom';
+import Header from './components/header';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     <>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div className={`theme-${theme}`}>
-          <Nav /> <div className="App">
+          <Header /> <div className="App">
             <header className="App-header">
               <p>
                 Iäm a little tjejcballer bean.
