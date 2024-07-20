@@ -10,15 +10,11 @@ export interface IProject {
 
 export interface IRepo {
     id: string;
-    html_url: string;
-    topics: [];
-    created_at: string;
-    name: string;
-    language: string;
-    description: string
+    html_url?: string;
+    topics?: [];
+    created_at?: string;
+    name?: string;
+    language?: string;
+    description?: string
 
-}
-
-export interface ITempRepo {
-    id: string;
 }
