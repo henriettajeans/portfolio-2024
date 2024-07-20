@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ThemeContext } from './model/themeContext';
 import './App.scss';
-import { Nav } from './components/navbar/nav';
-import { Footer } from './components/footer/footer';
+import { Nav } from './components/nav';
+import { Footer } from './components/footer';
 import { Outlet } from 'react-router-dom';
 
 function App() {
@@ -18,26 +18,21 @@ function App() {
   const [theme, setTheme] = useState(getDefaultTheme());
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`theme-${theme}`}>
-        <Outlet />
-        <Nav />
-
-
-        <div className="App">
-          <header className="App-header">
-            <p>
-              Iäm a little tjejcailler bean.
-            </p>
-
-          </header>
-        </div >
-
-        <Footer />
-
-      </div>
-    </ThemeContext.Provider >
-
+    <>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <div className={`theme-${theme}`}>
+          <Nav /> <div className="App">
+            <header className="App-header">
+              <p>
+                Iäm a little tjejcballer bean.
+              </p>
+            </header>
+            <Outlet />
+          </div >
+          <Footer />
+        </div>
+      </ThemeContext.Provider >
+    </>
   );
 }
 

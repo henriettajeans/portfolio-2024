@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import { About } from "./components/about/aboutme";
-import { Home } from "./components/home/home";
-import { Projects } from "./components/projects/projectDisplays";
-import { Project } from "./components/singleProject/singleProject";
+import { About } from "./components/aboutme";
+import { Home } from "./components/home";
+import { Projects } from "./components/projectDisplays";
+import { Project } from "./components/singleProject";
+import { NotFound } from "./components/404";
 
 export const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
             {
                 path: '/project/:id',
                 element: <Project />
+            },
+            {
+                path: "*",
+                element: <NotFound />
             }
 
         ]

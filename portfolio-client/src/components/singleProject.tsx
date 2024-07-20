@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IRepo } from "../../model/IProject";
-import { GetRepoById } from "../../controller/getProject";
+import { IRepo } from "../model/IProject";
+import { GetRepoById } from "../controller/getProject";
 
 
 

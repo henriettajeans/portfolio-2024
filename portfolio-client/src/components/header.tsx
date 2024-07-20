@@ -1,6 +1,6 @@
-import '../../styles/header.scss';
+import '../styles/header.scss';
 import { FC, useContext } from 'react';
-import { ThemeContext } from '../../model/themeContext';
+import { ThemeContext } from '../model/themeContext';
 
 
 const Header: FC = () => {

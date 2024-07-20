@@ -1,4 +1,4 @@
-import { Welcome } from '../welcome/welcomeMessage';
+import { Welcome } from './welcomeMessage';
 export const Home = () => {
     return (
         <>
