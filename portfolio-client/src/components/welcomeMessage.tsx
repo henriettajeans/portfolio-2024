@@ -11,7 +11,7 @@ export const Welcome: FC = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLetterClass('text-animate-hover');
-        }, 4000);
+        }, 1000);
 
         // Cleanup function to clear the timeout
         return () => clearTimeout(timer);
