@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { ThemeContext } from './model/themeContext';
 import './App.scss';
-import { Nav } from './components/nav';
 import { Footer } from './components/footer';
 import { Outlet } from 'react-router-dom';
 import Header from './components/header';
+import { Home } from './components/home';
 
 function App() {
 
