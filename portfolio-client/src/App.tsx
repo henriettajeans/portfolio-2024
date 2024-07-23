@@ -25,7 +25,6 @@ function App() {
           <Header /> <div className="App">
             <header className="App-header">
               <p>
-                Iäm a little tjejcballer bean.
               </p>
             </header>
             <Outlet />
