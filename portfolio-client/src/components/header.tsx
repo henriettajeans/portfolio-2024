@@ -6,12 +6,7 @@ import logo from "../assets/moon.png";
 
 
 const Header: FC = () => {
-    const { theme, setTheme } = useContext(ThemeContext);
-    const handleThemeChange = () => {
-        const isCurrentDark = theme === 'dark';
-        setTheme(isCurrentDark ? 'light' : 'dark');
-        localStorage.setItem('theme', isCurrentDark ? 'light' : 'dark');
-    };
+
     return (
         <header className="header">
             <Nav />
@@ -21,16 +16,7 @@ const Header: FC = () => {
                     <span>Light/Dark mode app</span>
                 </a>
                 <div className="toggle-btn-section">
-                    <div className={`toggle-checkbox m-vertical-auto`}>
-                        <input
-                            className="toggle-btn__input"
-                            type="checkbox"
-                            name="checkbox"
-                            onChange={handleThemeChange}
-                            checked={theme === 'light'}
-                        />
-                        <button type="button" className={`toggle-btn__input-label`} onClick={handleThemeChange}></button>
-                    </div>
+
                 </div>
             </div>
         </header>
