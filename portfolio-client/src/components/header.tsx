@@ -2,7 +2,7 @@ import '../styles/header.scss';
 import { FC, useContext } from 'react';
 import { ThemeContext } from '../model/themeContext';
 import { Nav } from './nav';
-import logo from "../assets/moon.png";
+import logo from "../assets/Logo-tjejbaciller.png";
 
 
 const Header: FC = () => {
