@@ -8,12 +8,21 @@
     color: darkblue;
     background-color: lightgray;
   }
+  .theme-background {
+    color: grey;
+    background-color: lightpink;
+  }
 }
 .dark {
+  height: 100%;
   color: lightyellow;
   background-color: palevioletred;
   .text {
     color: lightyellow;
     background-color: darkolivegreen;
+  }
+  .theme-background {
+    color: lightyellow;
+    background-color: palevioletred;
   }
 }

@@ -10,21 +10,19 @@ function App() {
   const [theme, setTheme] = useState('light');
 
   return (
-    <>
-      <ThemeProvider>
-        <div className={theme}>
+    <ThemeProvider>
+      <div className={theme}>
 
-          <section className='background flex'>
-            <Header />
-            <h1 className='text'>Hej från tjejbacillen</h1>
-            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
-            <Outlet />
-          </section>
-          <Footer />
+        <section className='background flex'>
+          <Header />
+          <h1 className='text'>Hej från tjejbacillen</h1>
+          <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
+          <Outlet />
+        </section>
+        <Footer />
 
-        </div >
-      </ThemeProvider>
-    </>
+      </div >
+    </ThemeProvider>
   );
 }
 

@@ -1,18 +1,15 @@
 import { Link } from "react-router-dom"
+import '../styles/footer.scss'
 
 export const Footer = () => {
 
 
     return (
-        <section className="footer-container">
-            <section className="footer-container__name">
-                <span className="footer-container__name__first">Henrietta</span>
-                <span className="footer-container__name__last">Jeansson</span>
+        <footer className="footer-container">
+            <section className="theme-background">
+                <Link to="mailto:henrietta.jeansson@medieinstitutet.se" className="text">henrietta.jeansson</Link>
+                <Link to="mailto:henrietta.jeansson@medieinstitutet.se" className="text">@medieinstitutet.se</Link>
             </section>
-            <section className="footer-container__mail">
-                <Link to="mailto:henrietta.jeansson@medieinstitutet.se" className="footer-container__mail__1">henrietta.jeansson</Link>
-                <Link to="mailto:henrietta.jeansson@medieinstitutet.se" className="footer-container__mail__2">@medieinstitutet.se</Link>
-            </section>
-        </section>
+        </footer>
     )
 }

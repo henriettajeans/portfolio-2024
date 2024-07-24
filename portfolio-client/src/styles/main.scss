@@ -4,3 +4,13 @@
 @import "animatedLetters.scss";
 @import "about";
 @import "themes";
+@import "footer";
+@import "variables";
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  background-color: $prettyBlue;
+}
