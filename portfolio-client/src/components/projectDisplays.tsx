@@ -11,17 +11,18 @@ export const Projects = () => {
 
     useEffect(() => {
         const getData = async () => {
-            let projects = await getProjects();
-
-            setProjects(projects);
-        }
+            try {
+                let projects = await getProjects();
+                setProjects(projects);
+            } catch (error) {
+                console.error("Error i projectDisplays med getData:", error);
+            }
+        };
 
         if (projects.length === 0) {
             getData();
-        } else {
-            console.log("Error med projekt component eller getProjects")
         }
-    });
+    }, [projects.length]);
 
 
     const showAbout = () => {

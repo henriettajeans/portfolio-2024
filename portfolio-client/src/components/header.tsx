@@ -13,11 +13,7 @@ const Header: FC = () => {
             <div className="header-content">
                 <a href="/" className="logo-section">
                     <img src={logo} className='logo' alt="logo" />
-                    <span>Light/Dark mode app</span>
                 </a>
-                <div className="toggle-btn-section">
-
-                </div>
             </div>
         </header>
     );

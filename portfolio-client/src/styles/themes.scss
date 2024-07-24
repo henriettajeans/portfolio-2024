@@ -1,12 +1,17 @@
 /** @format */
 
 .light {
+  height: 100%;
+  color: grey;
+  background-color: lightpink;
   .text {
     color: darkblue;
     background-color: lightgray;
   }
 }
 .dark {
+  color: lightyellow;
+  background-color: palevioletred;
   .text {
     color: lightyellow;
     background-color: darkolivegreen;
