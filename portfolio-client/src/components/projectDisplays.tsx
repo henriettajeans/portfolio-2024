@@ -26,6 +26,11 @@ export const Projects = () => {
         }
     }, [projects.length]);
 
+    const formatDate = (dateString: string): string => {
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+    };
+
 
     const showAbout = () => {
         navigate(`/about`);
@@ -37,7 +42,7 @@ export const Projects = () => {
             <div className="project" key={project.id}>
                 <h1 className="myProjects--container__components__title">{project.name}</h1>
                 <p><Link to={project.html_url} className="myProjects--container__components__link">{project.html_url}</Link></p>
-                <span className="myProjects--container__components__created">Skapades {project.created_at}</span>
+                <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
                 <p className="myProjects--container__components__lang">{project.language}</p>
                 <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
             </div>
