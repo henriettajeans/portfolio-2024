@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { getProjects } from "../controller/getProject";
 import { IProject } from "../model/IProject";
+import "../styles/projectDisplay.scss";
+
 
 export const Projects = () => {
     const [projects, setProjects] = useState<IProject[]>([]);
@@ -32,7 +34,7 @@ export const Projects = () => {
     let html = projects.map((project) => {
         return (
 
-            <div className="myProjects--container__components" key={project.id}>
+            <div className="project" key={project.id}>
                 <h1 className="myProjects--container__components__title">{project.name}</h1>
                 <p><Link to={project.html_url} className="myProjects--container__components__link">{project.html_url}</Link></p>
                 <span className="myProjects--container__components__created">Skapades {project.created_at}</span>

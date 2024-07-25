@@ -13,6 +13,10 @@
     color: white;
     background-color: darkcyan;
   }
+  .project {
+    color: white;
+    background-color: grey;
+  }
 }
 
 .light {
@@ -26,5 +30,9 @@
   .theme-background {
     color: $darkerBlue;
     background-color: $lightBgBase;
+  }
+  .project {
+    color: grey;
+    background-color: white;
   }
 }
