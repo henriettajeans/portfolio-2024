@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IQuestionAndAnswers, questionAndAnswers } from "../model/questionsList";
-import illustration from "../assets/FAQ-tjejbaciller.png";
+import illustration from "../assets/Logo.png";
 import '../styles/main.scss';
 
 export const About = () => {
@@ -18,10 +18,8 @@ export const About = () => {
 
     let questionsListHtml = list.map(question => {
         return (
-            <div key={question.id}>
-                <div>
-                    <h5 onClick={() => handleToggle(question.id)}> {question.question} </h5>
-                </div>
+            <div className="singleQuestion" key={question.id}>
+                <h5 onClick={() => handleToggle(question.id)}> {question.question} </h5>
             </div>
         )
     });
@@ -31,15 +29,16 @@ export const About = () => {
     return (
         <div className="about-container" >
             <h2 className="about-container__title">Lite om mig</h2>
-            <section>
+            <section className="questions">
                 {questionsListHtml}
             </section>
-            <section>
+            <section className="bubble">
                 {selectedQuestion && (
                     <p>{selectedQuestion.answer}</p>
                 )}
-                <img src={illustration} className='illustration' alt="logo" />
             </section>
+            <img src={illustration} className='illustration' alt="logo" />
+
         </div>
     )
 }
