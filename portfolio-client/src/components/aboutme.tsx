@@ -18,8 +18,8 @@ export const About = () => {
 
     let questionsListHtml = list.map(question => {
         return (
-            <div className="singleQuestion" key={question.id}>
-                <h5 onClick={() => handleToggle(question.id)}> {question.question} </h5>
+            <div className="singleQuestion" key={question.id} onClick={() => handleToggle(question.id)}>
+                <h5 >→ {question.question} </h5>
             </div>
         )
     });

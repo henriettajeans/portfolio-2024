@@ -11,9 +11,7 @@ export const Footer = () => {
 
     return (
         <footer className="theme-background">
-            <section className="">
-                <Link to="mailto:henrietta.jeansson@medieinstitutet.se" className="text">henrietta.jeansson@medieinstitutet.se</Link>
-                <p>{`© ${year} Henrietta Jeansson`}</p>
+            <section className=""><p>{`© ${year} Henrietta Jeansson`}</p>
             </section>
         </footer>
     )
