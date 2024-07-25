@@ -19,6 +19,7 @@ function App() {
         <main className='background'>
           <Outlet />
           <div className='theme-button'>
+
             <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
 
           </div>
