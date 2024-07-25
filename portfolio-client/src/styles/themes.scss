@@ -1,28 +1,30 @@
 /** @format */
+@import "variables";
+
+.dark {
+  height: 100%;
+  color: $darkerBlue;
+  background-color: $prettyBlue;
+  .text {
+    color: white;
+    background-color: darkcyan;
+  }
+  .theme-background {
+    color: white;
+    background-color: darkcyan;
+  }
+}
 
 .light {
   height: 100%;
-  color: grey;
-  background-color: lightpink;
+  color: $expressionPurple;
+  background-color: $lightBgBase;
   .text {
-    color: darkblue;
-    background-color: lightgray;
+    color: $statementBlue;
+    background-color: $lightBgBase;
   }
   .theme-background {
-    color: grey;
-    background-color: lightpink;
-  }
-}
-.dark {
-  height: 100%;
-  color: lightblue;
-  background-color: palevioletred;
-  .text {
-    color: lightyellow;
-    background-color: darkolivegreen;
-  }
-  .theme-background {
-    color: lightyellow;
-    background-color: palevioletred;
+    color: $darkerBlue;
+    background-color: $lightBgBase;
   }
 }

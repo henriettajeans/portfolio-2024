@@ -13,7 +13,7 @@ function App() {
     <ThemeProvider>
       <div className={theme}>
 
-        <section className='background flex'>
+        <section className='background'>
           <Header />
           <h1 className='text'>Hej från tjejbacillen</h1>
           <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
