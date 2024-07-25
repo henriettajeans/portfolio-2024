@@ -33,8 +33,10 @@ export const About = () => {
                 {questionsListHtml}
             </section>
             <section className="bubble">
-                {selectedQuestion && (
+                {selectedQuestion ? (
                     <p>{selectedQuestion.answer}</p>
+                ) : (
+                    <p>Ask me a question from these above</p>
                 )}
             </section>
             <img src={illustration} className='illustration' alt="logo" />
