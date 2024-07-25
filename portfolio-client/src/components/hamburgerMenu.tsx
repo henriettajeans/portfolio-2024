@@ -5,7 +5,7 @@ export const HamburgerToggle = () => {
     let [toggleForm, setToggleForm] = useState(false)
     return (
         <div>
-            <button onClick={() => { setToggleForm(!toggleForm) }}>Meny
+            <button className="hamMenu" onClick={() => { setToggleForm(!toggleForm) }}>Meny
 
             </button>
             {toggleForm &&

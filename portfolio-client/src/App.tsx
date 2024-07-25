@@ -12,17 +12,22 @@ function App() {
   return (
     <ThemeProvider>
       <div className={theme}>
-
-        <section className='background'>
+        <header className="header">
           <Header />
-          <h1 className='text'>Hej från tjejbacillen</h1>
-          <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
+
+        </header>
+        <main className='background'>
           <Outlet />
-        </section>
+          <div className='theme-button'>
+            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
+
+          </div>
+        </main>
+
         <Footer />
 
       </div >
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 
