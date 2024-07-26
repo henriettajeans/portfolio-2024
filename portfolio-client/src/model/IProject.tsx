@@ -7,6 +7,7 @@ export interface IProject {
     created_at: string;
     name: string;
     language: string
+    description: string
 
 }
 
@@ -21,7 +22,7 @@ export interface IRepo {
 
 }
 export interface IProjectProp {
-    project: IProject;
+    filteredProjects: IProject[];
 }
 
 export interface IFilterObjects {
@@ -30,6 +31,4 @@ export interface IFilterObjects {
     groupProject: GroupProject[];
     hobbyProject: HobbyProject[];
     sort: SortOption
-
-
 }

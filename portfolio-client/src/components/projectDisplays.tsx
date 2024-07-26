@@ -34,17 +34,13 @@ export const Projects = () => {
         };
         getData();
     }, []);
-    const sortAndFilterProjects = (filterObj: IFilterObjects) => {
+    const sortAndFilterProjects = (filterObj: typeof filters) => {
         return projects.filter(item => {
             return (item.name && item.name.toLowerCase().includes(filterObj.searchTerm.toLowerCase())) &&
                 (filterObj.topics.length > 0 ? filterObj.topics.includes(item.topics) : true);
         });
     };
-    useEffect(() => {
-        const data = sortAndFilterProjects(filters);
-        setProjects(data);  // Use a separate state to avoid infinite loops
-    }, [filters]);
-
+    const filteredProjects = sortAndFilterProjects(filters);
     let html = projects.map((project) => {
         return (
 
@@ -61,6 +57,7 @@ export const Projects = () => {
         <section className="myProjects--title">
 
             <h1 className="myProjects--title__text">Projects</h1>
+            <Search filteredProjects={filteredProjects} />
         </section>
         <div className="myProjects--container">
 
