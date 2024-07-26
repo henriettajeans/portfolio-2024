@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IFilterObjects, IProject } from "../model/IProject";
 import { Topics, TOPICS } from "../model/filterType";
+import { Link } from "react-router-dom";
 
 
 export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, setFilteredProjects: React.Dispatch<React.SetStateAction<IProject[]>> }> = ({ projects, filters, setFilteredProjects }) => {
@@ -8,7 +9,7 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
     const [selectedTopics, setSelectedTopics] = useState<Topics[]>(filters.topics);
 
     const filterProjects = (projects: IProject[], filters: IFilterObjects): IProject[] => {
-        console.log('Filtering with:', { searchTerm, selectedTopics, filters });
+
 
         return projects.filter(item => {
             const matchesSearchTerm = item.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -19,33 +20,28 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
             return matchesSearchTerm && matchesTopics;
         });
     };
-
-    useEffect(() => {
-        const filtered = filterProjects(projects, { ...filters, searchTerm, topics: selectedTopics });
-        setFilteredProjects(filtered);
-    }, [projects, searchTerm, selectedTopics, filters]);
-
     const handleSearchTermChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
 
     const handleTopicChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const options = event.target.options;
-        const selectedValues: Topics[] = [];
-        for (let i = 0; i < options.length; i++) {
-            if (options[i].selected) {
-                const value = options[i].value as Topics;
-                if (TOPICS.includes(value)) {  // Ensure value is a valid Topics type
-                    selectedValues.push(value);
-                }
-            }
+        const selectedValue = event.target.value as Topics;
+        console.log("klick event target value");
+
+        if (TOPICS.includes(selectedValue)) {
+            setSelectedTopics([selectedValue]);
+            console.log(selectedValue);
+        } else {
+            setSelectedTopics([]);
         }
-        setSelectedTopics(selectedValues);
+
+
     };
-    // const options = TOPICS.map(topic => ({
-    //     value: topic,
-    //     label: topic
-    // }));
+
+    useEffect(() => {
+        const filtered = filterProjects(projects, { ...filters, searchTerm, topics: selectedTopics });
+        setFilteredProjects(filtered);
+    }, [projects, searchTerm, selectedTopics, filters, setFilteredProjects]);
 
     return (
         <>
@@ -63,11 +59,10 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
                 <label htmlFor="topics">Topics:</label>
                 <select
                     id="topics"
-                    multiple
-                    value={selectedTopics}
+
+                    value={selectedTopics[0] || ""}
                     onChange={handleTopicChange}
-                    style={{ width: '200px', height: '150px' }} // Adjust styling as needed
-                >
+                ><option value="">Select a topic</option>
                     {TOPICS.map(topic => (
                         <option key={topic} value={topic}>{topic}</option>
                     ))}
@@ -76,15 +71,12 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
                     <h2>Search Results:</h2>
                     <ul>
                         {projects.filter(project => filterProjects([project], filters).length > 0).map(project => (
-                            <li key={project.id}>
-                                <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-                                    <h3>{project.name}</h3>
-                                    <p>{project.description}</p>
-                                    <p><strong>Language:</strong> {project.language}</p>
-                                    <p><strong>Created At:</strong> {new Date(project.created_at).toLocaleDateString()}</p>
-                                    <p><strong>Topics:</strong> {project.topics.join(', ')}</p>
-                                </a>
-                            </li>
+                            <div className="project" key={project.id}>
+                                <h1 className="myProjects--container__components__title">{project.name}</h1>
+                                <span className="myProjects--container__components__created">Skapades {project.created_at}</span>
+                                <p className="myProjects--container__components__lang">{project.language}</p>
+                                <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
+                            </div>
                         ))}
                     </ul>
                 </div>

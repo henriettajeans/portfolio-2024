@@ -60,7 +60,7 @@ export const Projects = () => {
         </div>
         <div className="myProjects--container">
 
-            {html}
+            {/* {html} */}
             <button onClick={showAbout} className="myProjects--container__abt-btn">Låt mig berätta lite om mig själv</button>
         </div>
     </>);
