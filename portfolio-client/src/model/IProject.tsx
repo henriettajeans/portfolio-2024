@@ -1,9 +1,9 @@
-import { Topics, GroupProject, HobbyProject, SortOption } from "./filterType";
+import { GroupProject, HobbyProject, SortOption, Topics } from "./filterType";
 
 export interface IProject {
     id: string;
     html_url: string;
-    topics: [] | any;
+    topics: Topics[];
     created_at: string;
     name: string;
     language: string
@@ -14,7 +14,7 @@ export interface IProject {
 export interface IRepo {
     id: string;
     html_url?: string;
-    topics?: [];
+    topics?: Topics[];
     created_at?: string;
     name?: string;
     language?: string;
@@ -22,8 +22,9 @@ export interface IRepo {
 
 }
 export interface IProjectProp {
-    filteredProjects: IProject[];
+    projects: IProject[];
 }
+
 
 export interface IFilterObjects {
     searchTerm: string;
@@ -31,4 +32,9 @@ export interface IFilterObjects {
     groupProject: GroupProject[];
     hobbyProject: HobbyProject[];
     sort: SortOption
+}
+export interface ISearchProps {
+    projects: IProject[];
+    filters: IFilterObjects;
+    setFilteredProjects: React.Dispatch<React.SetStateAction<IProject[]>>;
 }
