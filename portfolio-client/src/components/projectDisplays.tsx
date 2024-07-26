@@ -19,10 +19,7 @@ export const Projects = () => {
     const showAbout = () => {
         navigate(`/about`);
     };
-    const formatDate = (dateString: string): string => {
-        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString(undefined, options);
-    };
+
     useEffect(() => {
         const getData = async () => {
             try {
@@ -46,7 +43,7 @@ export const Projects = () => {
 
             <div className="project" key={project.id}>
                 <h1 className="myProjects--container__components__title">{project.name}</h1>
-                <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
+                {/* <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span> */}
                 <p className="myProjects--container__components__lang">{project.language}</p>
                 <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
             </div>
@@ -61,7 +58,7 @@ export const Projects = () => {
         </section>
         <div className="myProjects--container">
 
-            {html}
+            {/* {html} */}
             <button onClick={showAbout} className="myProjects--container__abt-btn">Låt mig berätta lite om mig själv</button>
         </div>
     </>);
