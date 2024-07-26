@@ -13,7 +13,17 @@ body {
   margin: 0 auto;
   width: 100wv;
   background-color: white;
-  cursor: pointer;
+  // cursor: pointer;
+  select {
+    appearance: auto; /* Ensures default browser styling */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+  }
 
   .main {
     margin-top: 3em;
