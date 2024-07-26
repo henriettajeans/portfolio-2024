@@ -1,25 +1,35 @@
-import { useEffect, useState } from "react";
-import { getProjects } from "../controller/getProject";
-import { IFilterObjects, IProject, IProjectProp, ISearchProps } from "../model/IProject";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { IFilterObjects, IProject } from "../model/IProject";
 
-export const Search: React.FC<ISearchProps> = ({ projects, filters, setFilteredProjects }) => {
 
-    const sortAndFilterProjects = () => {
-        return projects.filter(item => {
-            const matchesSearchTerm = item.name && item.name.toLowerCase().includes(filters.searchTerm.toLowerCase());
+export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, setFilteredProjects: React.Dispatch<React.SetStateAction<IProject[]>> }> = ({ projects, filters, setFilteredProjects }) => {
+
+    const sortAndFilterProjects = (projects: IProject[], filters: IFilterObjects): IProject[] => {
+        const filteredProjects = projects.filter(item => {
+            const matchesSearchTerm = item.name.toLowerCase().includes(filters.searchTerm.toLowerCase());
             const matchesTopics = filters.topics.length === 0 || filters.topics.some(filterTopic =>
                 item.topics.includes(filterTopic)
             );
-            // Implement additional filter conditions for groupProject, hobbyProject, and sorting if needed
             return matchesSearchTerm && matchesTopics;
         });
+        const sortedProjects = filteredProjects.sort((a, b) => {
+            const nameA = a.name.toLowerCase();
+            const nameB = b.name.toLowerCase();
+
+            if (filters.sort === 'desc') {
+                return nameB.localeCompare(nameA);
+            } else if (filters.sort === 'asc') {
+                return nameA.localeCompare(nameB);
+            }
+
+            return 0;
+        });
+        return sortedProjects;
     };
     useEffect(() => {
-        const filtered = sortAndFilterProjects();
-        setFilteredProjects(filtered);
+        const filteredAndSorted = sortAndFilterProjects(projects, filters);
+        setFilteredProjects(filteredAndSorted);
     }, [projects, filters, setFilteredProjects]);
-
 
     return (
         <><input>
