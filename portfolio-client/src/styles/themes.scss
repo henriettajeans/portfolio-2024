@@ -2,7 +2,6 @@
 @import "variables";
 
 .dark {
-  height: 100%;
   color: $darkerBlue;
   background-color: $prettyBlue;
   .text {
@@ -17,10 +16,13 @@
     color: white;
     background-color: grey;
   }
+  .hamMenu-btn {
+    color: white;
+    background-color: $expressionPurple;
+  }
 }
 
 .light {
-  height: 100%;
   color: $expressionPurple;
   background-color: $lightBgBase;
   .text {
@@ -34,5 +36,9 @@
   .project {
     color: grey;
     background-color: white;
+  }
+  .hamMenu-btn {
+    color: white;
+    background-color: $prettyBlue;
   }
 }

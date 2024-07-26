@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
+import '../styles/header.scss';
 
 export const HamburgerToggle = () => {
     let [toggleForm, setToggleForm] = useState(false)
@@ -26,21 +27,21 @@ export const HamburgerToggle = () => {
         setToggleForm(false);
     };
     return (
-        <div ref={menuRef}>
-            <button className="hamMenu" onClick={() => setToggleForm(!toggleForm)}>Meny</button>
+        <div className="hamMenu" ref={menuRef}>
+            <button className="hamMenu-btn" onClick={() => setToggleForm(!toggleForm)}>MENY
+            </button>
+
             {toggleForm && (
-                <section>
-                    <ul className="nav-container__flex__list">
-                        <li className="nav-container__flex__list__item">
-                            <Link to="/" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Hem</Link>
-                        </li>
-                        <li className="nav-container__flex__list__item">
-                            <Link to="/projects" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Projekt</Link>
-                        </li>
-                        <li className="nav-container__flex__list__item">
-                            <Link to="/about" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Om</Link>
-                        </li>
-                    </ul>
+                <section className="menu-items">
+                    <p className="hamMenu__text">
+                        <Link to="/" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Hem</Link>
+                    </p>
+                    <p className="hamMenu__text">
+                        <Link to="/projects" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Projekt</Link>
+                    </p>
+                    <p className="hamMenu__text">
+                        <Link to="/about" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Om</Link>
+                    </p>
                 </section>
             )}
         </div>

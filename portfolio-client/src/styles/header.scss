@@ -10,8 +10,27 @@
     height: 50px;
     left: 0;
   }
-  .hamMenu {
+  .hamMenu-btn {
     right: 0;
-    position: sticky;
+    position: fixed;
+    padding: 2em;
+    border-radius: 10em;
+    border: none;
+    top: 0.8em;
+    right: 3em;
+    background-color: beige;
+    font-family: "Concert One", sans-serif;
+    font-size: 1em;
+  }
+  .hamMenu {
+    background-color: white;
+    margin-top: 70px;
+    padding-right: 150px;
+    .menu-items {
+      position: fixed;
+      background-color: white;
+      border-radius: 10%;
+      padding: 3em;
+    }
   }
 }
