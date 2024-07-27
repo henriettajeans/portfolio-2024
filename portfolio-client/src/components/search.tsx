@@ -56,16 +56,18 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
             </div>
             <div>
                 <label htmlFor="topics">Topics:</label>
-                <label htmlFor="topics">Topics:</label>
                 <select
                     id="topics"
-
                     value={selectedTopics[0] || ""}
                     onChange={handleTopicChange}
-                ><option value="">Select a topic</option>
+
+                >
                     {TOPICS.map(topic => (
-                        <option key={topic} value={topic}>{topic}</option>
+
+                        <option key={topic} value={topic}>{topic} </option>
+
                     ))}
+                    <option value="">Select a topic</option>
                 </select>
                 <div>
                     <h2>Search Results:</h2>
