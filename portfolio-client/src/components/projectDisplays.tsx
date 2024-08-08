@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getProjects } from "../controller/getProject";
 import { IFilterObjects, IProject } from "../model/IProject";
 import "../styles/projectDisplay.scss";
@@ -24,7 +24,7 @@ export const Projects = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                let projects: IProject[] = await getProjects();  // Fetch your projects here
+                let projects: IProject[] = await getProjects();
                 setProjects(projects);
             } catch (error) {
                 console.error("Error in projectDisplays with getData:", error);
@@ -32,22 +32,8 @@ export const Projects = () => {
         };
         getData();
     }, []);
-    const formatDate = (dateString: string): string => {
-        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString(undefined, options);
-    };
 
-    let html = projects.map((project) => {
-        return (
 
-            <div className="project" key={project.id}>
-                <h1 className="myProjects--container__components__title">{project.name}</h1>
-                <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
-                <p className="myProjects--container__components__lang">{project.language}</p>
-                <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
-            </div>
-        )
-    });
 
     return (<>
         <section className="myProjects--title">
@@ -60,7 +46,6 @@ export const Projects = () => {
         </div>
         <div className="myProjects--container">
 
-            {/* {html} */}
             <button onClick={showAbout} className="myProjects--container__abt-btn">Låt mig berätta lite om mig själv</button>
         </div>
     </>);

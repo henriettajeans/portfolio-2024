@@ -34,8 +34,11 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
         } else {
             setSelectedTopics([]);
         }
+    };
 
-
+    const formatDate = (dateString: string): string => {
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString(undefined, options);
     };
 
     useEffect(() => {
@@ -75,7 +78,7 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
                         {projects.filter(project => filterProjects([project], filters).length > 0).map(project => (
                             <div className="project" key={project.id}>
                                 <h1 className="myProjects--container__components__title">{project.name}</h1>
-                                <span className="myProjects--container__components__created">Skapades {project.created_at}</span>
+                                <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
                                 <p className="myProjects--container__components__lang">{project.language}</p>
                                 <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
                             </div>
