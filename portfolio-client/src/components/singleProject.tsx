@@ -34,6 +34,7 @@ export const Project = (() => {
                     <a href={project?.html_url} className="project-component__flex__url__link">
                         ~ Se repot på github ~
                     </a></p>
+                <p className="project-component__flex__desc"> {project?.topics?.join(", ")}</p>
 
             </div>
         </article>
