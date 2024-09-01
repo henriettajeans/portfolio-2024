@@ -22,6 +22,21 @@ export const Project = (() => {
         }
     }
     return (<>
+        <article className="project-component">
+            {/* TODO: Add back to last page button */}
+            {/* TODO: Add next project button */}
+            <h1 className="project-component__title">{project?.name}</h1>
+            <div className="project-component__flex">
+
+                <h4 className="project-component__flex__desctitle">Beskrivning av projektet</h4>
+                <p className="project-component__flex__desc">{project?.description}</p>
+                <p className="project-component__flex__url">
+                    <a href={project?.html_url} className="project-component__flex__url__link">
+                        ~ Se repot på github ~
+                    </a></p>
+
+            </div>
+        </article>
     </>
     );
 })
