@@ -2,23 +2,37 @@
 @import "variables";
 
 .dark {
-  color: $darkerBlue;
-  background-color: $prettyBlue;
+  color: $sage;
+  background-color: $dark-green;
   .text {
     color: white;
-    background-color: darkcyan;
+    background-color: rgb(145, 213, 213);
   }
   .theme-background {
     color: white;
-    background-color: darkcyan;
+    background-color: $grey;
   }
   .project {
     color: white;
-    background-color: grey;
+    background-color: $lightGrey;
   }
   .hamMenu-btn {
     color: white;
     background-color: $expressionPurple;
+  }
+  .singleQuestion {
+    padding: 0.8em;
+    margin: 0.5em;
+  }
+  .singleQuestion:hover {
+    background-color: $special-dark;
+    box-shadow: 0 5px $grey;
+  }
+  .singleQuestion:active {
+    background-color: darkgrey;
+  }
+  .bubble {
+    background-color: rgb(240, 243, 242);
   }
 }
 
@@ -30,8 +44,7 @@
     background-color: $lightBgBase;
   }
   .theme-background {
-    color: $darkerBlue;
-    background-color: $lightBgBase;
+    background-color: $lavendel;
   }
   .project {
     color: grey;
@@ -58,5 +71,19 @@
   label,
   p {
     color: pink;
+  }
+  .singleQuestion {
+    padding: 0.8em;
+    margin: 0.5em;
+  }
+  .singleQuestion:hover {
+    background-color: rgb(240, 206, 212);
+  }
+  .singleQuestion:active {
+    background-color: rgb(240, 206, 212);
+    box-shadow: 0 5px palevioletred;
+  }
+  .bubble {
+    background-color: rgb(255, 252, 253);
   }
 }
