@@ -24,7 +24,7 @@
 
 .light {
   color: $expressionPurple;
-  background-color: $lightBgBase;
+  background-color: $bg-light;
   .text {
     color: $statementBlue;
     background-color: $lightBgBase;
@@ -40,5 +40,23 @@
   .hamMenu-btn {
     color: white;
     background-color: $prettyBlue;
+  }
+  .project {
+    background-color: $lavendel;
+  }
+  h1 {
+    color: $magenta;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $amaranth;
+  }
+  span,
+  label,
+  p {
+    color: pink;
   }
 }
