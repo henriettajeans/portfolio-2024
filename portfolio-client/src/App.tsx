@@ -3,6 +3,8 @@ import { ThemeProvider } from './model/themeContext';
 import { Footer } from './components/footer';
 import { Outlet } from 'react-router-dom';
 import Header from './components/header';
+import { MdOutlineSwitchAccessShortcut } from "react-icons/md";
+
 import './App.scss';
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
           <Outlet />
           <div className='theme-button'>
 
-            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Byt här</button>
+            <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+              <MdOutlineSwitchAccessShortcut />
+            </button>
 
           </div>
         </main>

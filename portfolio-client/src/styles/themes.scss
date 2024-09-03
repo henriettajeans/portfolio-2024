@@ -4,6 +4,21 @@
 .dark {
   color: $sage;
   background-color: $dark-green;
+  h1 {
+    color: $dark-green;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dark-blue;
+  }
+  span,
+  label,
+  p {
+    color: $statementBlue;
+  }
   .text {
     color: white;
     background-color: rgb(145, 213, 213);
@@ -17,22 +32,25 @@
     background-color: $lightGrey;
   }
   .hamMenu-btn {
-    color: white;
-    background-color: $expressionPurple;
+    color: $dark-green;
+    background-color: $sage;
   }
   .singleQuestion {
     padding: 0.8em;
     margin: 0.5em;
   }
   .singleQuestion:hover {
-    background-color: $special-dark;
+    background-color: $sage;
     box-shadow: 0 5px $grey;
   }
   .singleQuestion:active {
-    background-color: darkgrey;
+    background-color: $sage;
   }
   .bubble {
     background-color: rgb(240, 243, 242);
+  }
+  .themeBtn {
+    color: $magenta;
   }
 }
 
@@ -51,8 +69,8 @@
     background-color: white;
   }
   .hamMenu-btn {
-    color: white;
-    background-color: $prettyBlue;
+    color: $magenta;
+    background-color: $lavendel;
   }
   .project {
     background-color: $lavendel;
@@ -70,20 +88,20 @@
   span,
   label,
   p {
-    color: pink;
+    color: $expressionPurple;
   }
-  .singleQuestion {
-    padding: 0.8em;
-    margin: 0.5em;
-  }
+
   .singleQuestion:hover {
-    background-color: rgb(240, 206, 212);
+    background-color: $lavendel;
   }
   .singleQuestion:active {
-    background-color: rgb(240, 206, 212);
-    box-shadow: 0 5px palevioletred;
+    background-color: $lavendel;
+    box-shadow: 0 5px $magenta;
   }
   .bubble {
     background-color: rgb(255, 252, 253);
+  }
+  .themeBtn {
+    color: $sage;
   }
 }

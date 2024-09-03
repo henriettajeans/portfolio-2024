@@ -6,17 +6,10 @@
   margin: 1em;
   width: 80%;
   .questions {
-    // .singleQuestion {
-    //   padding: 0.8em;
-    //   margin: 0.5em;
-    // }
-    // .singleQuestion:hover {
-    //   background-color: rgb(240, 206, 212);
-    // }
-    // .singleQuestion:active {
-    //   background-color: rgb(240, 206, 212);
-    //   box-shadow: 0 5px palevioletred;
-    // }
+    .singleQuestion {
+      padding: 0.8em;
+      margin: 0.5em;
+    }
   }
   .bubble {
     width: 80vw;

@@ -28,7 +28,7 @@ export const About = () => {
 
     return (
         <div className="about-container" >
-            <h2 className="about-container__title">Lite om mig</h2>
+            <h1 className="about-container__title">Lite om mig</h1>
             <section className="questions">
                 {questionsListHtml}
             </section>
