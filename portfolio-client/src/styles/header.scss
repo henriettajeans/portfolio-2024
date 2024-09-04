@@ -5,6 +5,7 @@
   justify-content: space-between;
   position: absolute;
   width: 100%;
+  height: 3em;
   .logo {
     width: 50px;
     height: 50px;
@@ -17,20 +18,22 @@
     border-radius: 10em;
     border: none;
     top: 0.8em;
-    right: 3em;
+    // right: 3em;
     background-color: beige;
     font-family: "Concert One", sans-serif;
     font-size: 1em;
   }
-  .hamMenu {
+  // .hamMenu {
+  //   background-color: white;
+  //   margin-top: 70px;
+  //   padding-right: 150px;
+  .menu-items {
+    position: fixed;
     background-color: white;
-    margin-top: 70px;
-    padding-right: 150px;
-    .menu-items {
-      position: fixed;
-      background-color: white;
-      border-radius: 10%;
-      padding: 3em;
-    }
+    border-radius: 10%;
+    right: 3px;
+    top: 10px;
+    padding: 3em;
+    // }
   }
 }
