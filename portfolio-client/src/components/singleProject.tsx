@@ -1,8 +1,9 @@
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { IRepo } from "../model/IProject";
 import { GetRepoById } from "../controller/getProject";
+import { RiArrowGoBackLine } from "react-icons/ri";
 
 
 
@@ -10,6 +11,11 @@ export const Project = (() => {
 
     const [project, setProject] = useState<IRepo>();
     const { id } = useParams();
+    const navigate = useNavigate();
+
+    const getBack = () => {
+        navigate(`/projects`);
+    };
 
 
     useEffect(() => {
@@ -23,7 +29,8 @@ export const Project = (() => {
     }
     return (<>
         <article className="project-component">
-            {/* TODO: Add back to last page button */}
+            {/* TODO: Move button fither down to make it clickable (margin hinders this) */}
+            <button onClick={getBack} className="singleProjectBtn"> <RiArrowGoBackLine /> </button>
             {/* TODO: Add next project button */}
             <h2 className="project-component__title">{project?.name}</h2>
             <div className="project-component__flex">

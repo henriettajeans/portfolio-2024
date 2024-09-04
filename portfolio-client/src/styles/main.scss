@@ -9,11 +9,11 @@
 
 body {
   font-family: "Concert One", sans-serif;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
   width: 100wv;
   background-color: white;
-  // cursor: pointer;
+
   select {
     appearance: auto; /* Ensures default browser styling */
     padding: 8px;
@@ -23,6 +23,9 @@ body {
     display: block;
     background-color: #fff;
     cursor: pointer;
+  }
+  a {
+    // cursor: pointer;
   }
 
   .main {

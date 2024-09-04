@@ -18,7 +18,7 @@ export const Welcome: FC = () => {
     }, []);
 
     return (
-        <div className="">
+        <div className="home-container">
             <span className={`${letterClass}`}>Ӈ</span>
             <AnimatedLetters letterClass={letterClass} strArray={letterArray1} idx={5} />
             <br></br>
