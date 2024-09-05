@@ -27,7 +27,7 @@ export const About = () => {
     const selectedQuestion = list.find(question => question.id === openQuestionId);
 
     return (
-        <div className="about-container" >
+        <>
             <h1 className="about-container__title">Lite om mig</h1>
             <section className="questions">
                 {questionsListHtml}
@@ -41,6 +41,6 @@ export const About = () => {
             </section>
             <img src={illustration} className='illustration' alt="logo" />
 
-        </div>
+        </>
     )
 }

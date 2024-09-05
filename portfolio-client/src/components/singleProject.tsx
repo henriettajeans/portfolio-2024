@@ -30,9 +30,8 @@ export const Project = (() => {
     }
     return (<>
         <article className="project-component">
-            {/* TODO: Move button fither down to make it clickable (margin hinders this) */}
             <button onClick={getBack} className="singleProjectBtn"> <RiArrowGoBackFill /> </button>
-            {/* TODO: Add next project button */}
+
             <h2 className="project-component__title">{project?.name}</h2>
             <div className="project-component__flex">
 

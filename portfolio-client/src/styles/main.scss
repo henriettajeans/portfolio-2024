@@ -11,7 +11,7 @@
 body {
   font-family: "Concert One", sans-serif;
   height: 100vh;
-  margin: 0 auto;
+  margin: 0;
   width: 100wv;
   background-color: white;
 
@@ -29,9 +29,6 @@ body {
     // cursor: pointer;
   }
 
-  .main {
-    margin-top: 3em;
-  }
   .background {
     display: flex;
     flex-direction: column;

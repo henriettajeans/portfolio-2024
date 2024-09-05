@@ -40,10 +40,7 @@
     color: $sage;
     background-color: $dark-green;
   }
-  .singleQuestion {
-    padding: 0.8em;
-    margin: 0.5em;
-  }
+
   .singleQuestion:hover {
     background-color: $sage;
     box-shadow: 0 5px $grey;
@@ -52,10 +49,13 @@
     background-color: $sage;
   }
   .bubble {
-    background-color: rgb(240, 243, 242);
+    background-color: rgb(228, 231, 230);
   }
   .themeBtn {
     color: $magenta;
+  }
+  a {
+    color: $special-dark;
   }
 }
 
@@ -96,6 +96,9 @@
   p {
     color: $expressionPurple;
   }
+  a {
+    color: $statementBlue;
+  }
 
   .singleProjectBtn {
     color: $lavendel;
@@ -104,13 +107,13 @@
 
   .singleQuestion:hover {
     background-color: $lavendel;
+    box-shadow: 0 5px $magenta;
   }
   .singleQuestion:active {
     background-color: $lavendel;
-    box-shadow: 0 5px $magenta;
   }
   .bubble {
-    background-color: rgb(255, 252, 253);
+    background-color: rgb(255, 234, 241);
   }
   .themeBtn {
     color: $sage;
