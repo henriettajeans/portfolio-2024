@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IQuestionAndAnswers, questionAndAnswers } from "../model/questionsList";
 import illustration from "../assets/Logo.png";
 import '../styles/main.scss';

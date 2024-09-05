@@ -1,5 +1,5 @@
 import '../styles/header.scss';
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import logo from "../assets/Logo_tjejbaciller.png";
 import { HamburgerToggle } from './hamburgerMenu';
 

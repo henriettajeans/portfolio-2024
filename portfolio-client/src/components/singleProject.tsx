@@ -20,14 +20,15 @@ export const Project = (() => {
 
 
     useEffect(() => {
+        const getDataById = async () => {
+            if (id) {
+                let response = await GetRepoById(id!);
+                setProject(response);
+            }
+        };
         getDataById();
-    }, []);
-    const getDataById = async () => {
-        if (id) {
-            let response = await GetRepoById(id!);
-            setProject(response);
-        }
-    }
+    }, [id]);
+
     return (<>
         <article className="project-component">
             <button onClick={getBack} className="singleProjectBtn"> <RiArrowGoBackFill /> </button>
