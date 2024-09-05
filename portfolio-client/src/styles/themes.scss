@@ -36,6 +36,10 @@
     color: $dark-green;
     background-color: $sage;
   }
+  .singleProjectBtn {
+    color: $sage;
+    background-color: $dark-green;
+  }
   .singleQuestion {
     padding: 0.8em;
     margin: 0.5em;
@@ -91,6 +95,11 @@
   label,
   p {
     color: $expressionPurple;
+  }
+
+  .singleProjectBtn {
+    color: $lavendel;
+    background-color: $bg-light;
   }
 
   .singleQuestion:hover {

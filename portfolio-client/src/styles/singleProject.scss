@@ -1,0 +1,24 @@
+/** @format */
+
+@use "variables";
+
+.project-component {
+  margin: 2em;
+  height: 100%;
+  padding: 2em;
+  .singleProjectBtn {
+    font-size: 2em;
+    border: none;
+  }
+  &__title {
+    //add some styling
+    margin: 1em;
+  }
+  &__flex {
+    &__desc {
+      border: 1px solid red;
+      padding: 1em;
+      border-radius: 7%;
+    }
+  }
+}
