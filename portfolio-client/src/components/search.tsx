@@ -48,17 +48,16 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
 
     return (
         <>
-            <div>
-                <label htmlFor="searchTerm">Search:</label>
+            <article>
                 <input
                     id="searchTerm"
+                    placeholder="Sök..."
                     type="text"
                     value={searchTerm}
                     onChange={handleSearchTermChange}
                 />
-            </div>
-            <div>
-                <label htmlFor="topics">Topics:</label>
+            </article>
+            <article>
                 <select
                     id="topics"
                     value={selectedTopics[0] || ""}
@@ -70,22 +69,20 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
                         <option key={topic} value={topic}>{topic} </option>
 
                     ))}
-                    <option value="">Select a topic</option>
+                    <option value="">Välj en teknik</option>
                 </select>
-                <div>
-                    <h2>Search Results:</h2>
-                    <ul>
-                        {projects.filter(project => filterProjects([project], filters).length > 0).map(project => (
-                            <div className="project" key={project.id}>
-                                <h1 className="myProjects--container__components__title">{project.name}</h1>
-                                <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
-                                <p className="myProjects--container__components__lang">{project.language}</p>
-                                <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
-                            </div>
-                        ))}
-                    </ul>
-                </div>
-            </div>
+            </article>
+            <section className="projects">
+                {projects.filter(project => filterProjects([project], filters).length > 0).map(project => (
+                    <div className="project-container" key={project.id}>
+                        <h1 className="project-container__title">{project.name}</h1>
+                        <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
+                        <p className="myProjects--container__components__lang">{project.language}</p>
+                        <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
+                    </div>
+                ))}
+
+            </section>
         </>
 
     )

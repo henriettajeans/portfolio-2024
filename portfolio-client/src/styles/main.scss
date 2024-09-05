@@ -17,7 +17,7 @@ body {
 
   select {
     appearance: auto; /* Ensures default browser styling */
-    padding: 8px;
+    padding: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
@@ -26,7 +26,8 @@ body {
     cursor: pointer;
   }
   a {
-    // cursor: pointer;
+    text-decoration: none;
+    text-transform: none;
   }
 
   .background {

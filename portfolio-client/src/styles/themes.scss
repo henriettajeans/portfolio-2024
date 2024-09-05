@@ -5,19 +5,19 @@
   color: $sage;
   background-color: $dark-green;
   h1 {
-    color: $dark-green;
+    color: white;
   }
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $dark-blue;
+    color: white;
   }
   span,
   label,
   p {
-    color: $statementBlue;
+    color: white;
   }
   .text {
     color: white;
@@ -27,17 +27,17 @@
     color: white;
     background-color: $grey;
   }
-  .project {
+  .project-container {
     color: white;
-    background-color: $lightGrey;
+    background-color: $box-green;
   }
   .hamMenu-btn,
   .menu-items {
-    color: $dark-green;
+    color: white;
     background-color: $sage;
   }
   .singleProjectBtn {
-    color: $sage;
+    color: white;
     background-color: $dark-green;
   }
 
@@ -69,35 +69,32 @@
   .theme-background {
     background-color: $lavendel;
   }
-  .project {
-    color: grey;
-    background-color: white;
-  }
+
   .hamMenu-btn,
   .menu-items {
-    color: $magenta;
+    color: $darkText;
     background-color: $lavendel;
   }
-  .project {
+  .project-container {
     background-color: $lavendel;
   }
   h1 {
-    color: $magenta;
+    color: $darkText;
   }
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $amaranth;
+    color: $darkText;
   }
   span,
   label,
   p {
-    color: $expressionPurple;
+    color: $darkText;
   }
   a {
-    color: $statementBlue;
+    color: $darkText;
   }
 
   .singleProjectBtn {

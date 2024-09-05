@@ -9,7 +9,6 @@ import { Search } from "./search";
 export const Projects = () => {
     const [projects, setProjects] = useState<IProject[]>([]);
     const [filteredProjects, setFilteredProjects] = useState<IProject[]>([]);
-    const navigate = useNavigate();
     const [filters, setFilter] = useState<IFilterObjects>({
         searchTerm: '',
         topics: [],
@@ -17,9 +16,7 @@ export const Projects = () => {
         hobbyProject: [],
         sort: "asc",
     })
-    const showAbout = () => {
-        navigate(`/about`);
-    };
+
 
     useEffect(() => {
         const getData = async () => {
@@ -36,17 +33,11 @@ export const Projects = () => {
 
 
     return (<>
-        <section className="myProjects--title">
 
-            <h1 className="myProjects--title__text">Projects</h1>
-            <Search projects={projects} filters={filters} setFilteredProjects={setFilteredProjects} />
-        </section>
-        <div>
+        <h1 className="myProjects--title__text">Projects</h1>
+        <Search projects={projects} filters={filters} setFilteredProjects={setFilteredProjects} />
 
-        </div>
-        <div className="myProjects--container">
 
-            <button onClick={showAbout} className="myProjects--container__abt-btn">Låt mig berätta lite om mig själv</button>
-        </div>
+
     </>);
 }

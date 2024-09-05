@@ -1,9 +1,12 @@
 /** @format */
 
 @import "variables";
+.projects {
+  padding: 0.5em;
 
-.project {
-  padding: 2.5em;
-  margin: 0.5em;
-  border-radius: 3em;
+  .project-container {
+    padding: 2.5em;
+    margin: 0.5em;
+    border-radius: 3em;
+  }
 }
