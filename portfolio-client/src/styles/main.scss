@@ -18,12 +18,15 @@ body {
   select {
     appearance: auto; /* Ensures default browser styling */
     padding: 1em;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
     font-size: 16px;
     display: block;
-    background-color: #fff;
     cursor: pointer;
+  }
+  input {
+    padding: 1em;
+    border: none;
   }
   a {
     text-decoration: none;
@@ -53,6 +56,9 @@ body {
   }
 
   .illustration {
-    height: 400px;
+    height: 300px;
+    @include desktop {
+      height: 600px;
+    }
   }
 }
