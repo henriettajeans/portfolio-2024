@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
-import { CgMenuRight } from "react-icons/cg";
+import { IoMenu } from "react-icons/io5";
 import '../styles/header.scss';
 
 export const HamburgerToggle = () => {
@@ -29,7 +29,7 @@ export const HamburgerToggle = () => {
     };
     return (
         <div className="hamMenu" ref={menuRef}>
-            <button className="hamMenu-btn" onClick={() => setToggleForm(!toggleForm)}> <CgMenuRight />
+            <button className="hamMenu-btn" onClick={() => setToggleForm(!toggleForm)}> <IoMenu />
             </button>
 
             {toggleForm && (

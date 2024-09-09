@@ -1,4 +1,5 @@
 /** @format */
+@import "mixins";
 
 .header {
   display: flex;
@@ -20,6 +21,14 @@
     top: 0.8em;
     font-family: "Concert One", sans-serif;
     font-size: 1em;
+    svg {
+      height: 1.5em;
+      width: 1.5em;
+      @include desktop {
+        height: 3em;
+        width: 3em;
+      }
+    }
   }
   .menu-items {
     position: fixed;

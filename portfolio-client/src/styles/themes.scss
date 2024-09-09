@@ -2,6 +2,7 @@
 @import "variables";
 
 .dark {
+  height: 100%;
   color: $sage;
   background-color: $dark-green;
   h1 {
@@ -60,6 +61,7 @@
 }
 
 .light {
+  height: 100%;
   color: $expressionPurple;
   background-color: $bg-light;
   .text {

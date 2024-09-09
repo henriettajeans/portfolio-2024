@@ -4,6 +4,10 @@
 
 @import "mixins.scss";
 
+.singleQuestion {
+  padding: 1em;
+  border-radius: 10px;
+}
 .bubble {
   width: 80vw;
   height: 100%;
