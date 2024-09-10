@@ -2,6 +2,8 @@
 
 /src/assets/aboutme.json
 
+/src/model/workEx.tsx
+
 # dependencies
 /node_modules
 /.pnp

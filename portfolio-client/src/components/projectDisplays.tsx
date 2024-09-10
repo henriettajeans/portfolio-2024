@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { getProjects } from "../controller/getProject";
 import { IFilterObjects, IProject } from "../model/IProject";
 import "../styles/projectDisplay.scss";

@@ -9,9 +9,9 @@ const Header: FC = () => {
     return (
         <div>
 
-            <a href="/" className="logo-section">
+            {/* <a href="/" className="logo-section">
                 <img src={logo} className='logo' alt="logo" />
-            </a>
+            </a> */}
             < HamburgerToggle />
         </div>
     );
