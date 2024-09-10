@@ -30,6 +30,11 @@ export const ResumeComponent = () => {
         )
     })
 
+    const skillsHtml = skills.map((skill, index) => (
+        <span key={index} style={{ marginRight: '10px' }}>
+            {skill}
+        </span>
+    ));
     return (
         <>
             <section>
@@ -41,6 +46,7 @@ export const ResumeComponent = () => {
             <article>
 
                 {/* Map to Display skills with hover effect */}
+                {skillsHtml}
             </article>
             <article>
                 {/* Hobbies: Painting, beer, illustrating - each with a small drawing */}
