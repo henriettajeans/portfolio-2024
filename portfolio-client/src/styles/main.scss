@@ -3,6 +3,7 @@
 @import "header.scss";
 @import "animatedLetters.scss";
 @import "about";
+@import "home";
 @import "themes";
 @import "footer";
 @import "singleProject";
@@ -14,6 +15,7 @@ body {
   margin: 0;
   width: 100wv;
   background-color: white;
+  margin-bottom: 2em;
 
   select {
     appearance: auto; /* Ensures default browser styling */
