@@ -1,9 +1,9 @@
+import { HeroSection } from './hero';
 import { ResumeComponent } from './resume';
-import { Welcome } from './welcomeMessage';
 export const Home = () => {
     return (
         <>
-            <Welcome />
+            <HeroSection />
             <ResumeComponent />
         </>
 
