@@ -6,7 +6,7 @@ import '../styles/main.scss';
 export const ResumeComponent = () => {
     const [workList, setWorkList] = useState<IWorkExperience[]>(workExperience);
 
-    const skills = ["Typescript", "Wordpress", "PHP", "Web design", "API", "Sass"];
+    const skills = ["Typescript", "Wordpress", "PHP", "Web design", "API integration", "Sass", "Team work", "Social media strategy"];
 
     let workListHtml = workList.map(experience => {
         return (
@@ -58,9 +58,20 @@ export const ResumeComponent = () => {
                     {skillsHtml}
                 </article>
                 <h3>Hobbys</h3>
-                <article className="resume-containe__other__hobby">
+                <article className="resume-container__other__hobby">
+                    <h5>Rita</h5>
+                    <h5>Måla</h5>
+                    <h5>Koda</h5>
 
                     {/* Hobbies: Painting, beer, illustrating - each with a small drawing */}
+                </article>
+                <article>
+                    <h3>Other experiences</h3>
+                    <h4>
+                        Lorem ipsum
+                    </h4>
+                    <h5>Lorem ipsum doloret..</h5>
+
                 </article>
             </section>
         </section>

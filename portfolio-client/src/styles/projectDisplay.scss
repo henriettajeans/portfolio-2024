@@ -2,11 +2,11 @@
 @import "mixins";
 @import "variables";
 .projects {
-  padding: 0.5em;
+  padding: 3px;
   display: flex;
   flex-direction: column;
   .project-container {
-    padding: 2.5em;
+    padding: 1em;
     margin: 0.5em;
     border-radius: 3em;
   }
@@ -23,7 +23,6 @@
       padding: 2.5em;
       margin: 1.5em;
       border-radius: 3em;
-      padding-right: 1em;
     }
   }
 }

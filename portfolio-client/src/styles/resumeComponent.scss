@@ -8,25 +8,25 @@
   }
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100vw;
   gap: 2em;
   &__work {
     width: 100vw;
     height: 100%;
     &__item {
-      border: 1px solid black;
       border-radius: 30px;
-      padding: 2em;
+      padding: 1em;
     }
   }
   &__education {
-    border: 1px solid black;
     border-radius: 30px;
-    padding: 2em;
+    padding: 1em;
   }
   &__other {
+    margin-bottom: 0.6em;
+
     &__skills {
-      margin: 2em;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -46,7 +46,6 @@
       &__skills {
         display: flex;
         flex-direction: row;
-        // flex-wrap: wrap;
         gap: 1em;
 
         &__item {
@@ -59,21 +58,24 @@
   @include desktop {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 2em;
+    justify-content: space-evenly;
+    align-items: baseline;
 
     &__work {
       width: 45%;
-      border: 1px solid blueviolet;
     }
     &__other {
       width: 45%;
+
       &__skills {
-        &__item {
-          //   padding: 3px;
-        }
+        margin-top: 2px;
+        margin-bottom: 2em;
       }
       &__hobby {
         width: 45%;
+        margin-top: 2px;
+        margin-bottom: 2em;
       }
     }
   }

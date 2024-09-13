@@ -18,10 +18,17 @@ body {
   width: 100wv;
   background-color: white;
   margin-bottom: 2em;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 6px;
+  }
 
   select {
     appearance: auto; /* Ensures default browser styling */
-    padding: 1em;
+    padding: 3px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -32,7 +39,7 @@ body {
     text-wrap: wrap;
   }
   input {
-    padding: 1em;
+    padding: 3px;
     border: none;
   }
   a {
@@ -44,14 +51,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3em;
+    // padding-top: 3px;
     .theme-button {
       position: fixed;
       right: 80px;
       bottom: 100px;
       button {
         border: none;
-        padding: 1em;
+        padding: 0.8em;
         border-radius: 1em;
       }
     }
