@@ -11,21 +11,22 @@ export const ResumeComponent = () => {
     let workListHtml = workList.map(experience => {
         return (
             <article className="resume-container__work__item" key={experience.id}>
+                <h5>
+                    {experience.period}
+                </h5>
                 <h3>
                     {experience.occupation}
                 </h3>
                 <h4>
                     {experience.name}
                 </h4>
-                <h6>
+                <h5>
                     {experience.level}
-                </h6>
-                <h4>
-                    {experience.period}
-                </h4>
+                </h5>
+                {/* 
                 <h4>
                     {experience.description}
-                </h4>
+                </h4> */}
             </article>
         )
     })
@@ -42,10 +43,10 @@ export const ResumeComponent = () => {
             <section className="resume-container__work">
                 <h2>Education</h2>
                 <article className="resume-container__education">
-
+                    <h4>2022-2024</h4>
                     <h3>Webbutveckling e-handel</h3>
                     <h4>Medieinstitutet</h4>
-                    <h4>2022-2024</h4>
+
                 </article>
                 <h2>Experience</h2>
                 {workListHtml}
@@ -67,18 +68,30 @@ export const ResumeComponent = () => {
                 </article>
                 <h2>Other experiences</h2>
                 <article>
-                    <h3>
+                    <h4>
                         Illustratör
-                    </h3>
-                    <h4>Frilans</h4>
-                    <h4>2015-2020</h4>
+                    </h4>
+                    <h5>Frilans</h5>
+                    <h5>2015-2020</h5>
                 </article>
                 <article>
-                    <h3>
+                    <h4>
                         LSS coach
-                    </h3>
-                    <h4>Attendo UNIKA</h4>
-                    <h4>2017-2021</h4>
+                    </h4>
+                    <h5>Attendo UNIKA</h5>
+                    <h5>2017-2021</h5>
+                </article>
+                <h3>
+                    Schools
+                </h3>
+                <article>
+
+                    <h4>Gerlesborgsskolan Stockholm</h4>
+                    <h5>2014-2015</h5>
+                </article>
+                <article>
+                    <h4>Serietecknarutbildning, Skarpnäcks folkhögskola</h4>
+                    <h5>2017-2021</h5>
                 </article>
             </section>
         </section>
