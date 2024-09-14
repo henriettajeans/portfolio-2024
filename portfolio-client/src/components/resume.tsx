@@ -11,28 +11,28 @@ export const ResumeComponent = () => {
     let workListHtml = workList.map(experience => {
         return (
             <article className="resume-container__work__item" key={experience.id}>
-                <h4>
+                <h3>
                     {experience.occupation}
-                </h4>
-                <h5>
+                </h3>
+                <h4>
                     {experience.name}
-                </h5>
+                </h4>
                 <h6>
                     {experience.level}
                 </h6>
-                <p>
+                <h4>
                     {experience.period}
-                </p>
-                <p>
+                </h4>
+                <h4>
                     {experience.description}
-                </p>
+                </h4>
             </article>
         )
     })
 
 
     const skillsHtml = skills.map((skill, index) => (
-        <span className="resume-container__other__skills__item" key={index} style={{ marginRight: '10px' }}>
+        <span className="resume-container__other__skills__item" key={index}>
             {skill}
         </span>
     ));
@@ -40,38 +40,45 @@ export const ResumeComponent = () => {
         <section className="resume-container">
 
             <section className="resume-container__work">
-                <h3>Education</h3>
+                <h2>Education</h2>
                 <article className="resume-container__education">
 
-                    <h4>Webbutveckling e-handel</h4>
-                    <h5>Medieinstitutet</h5>
-                    <span>2022-2024</span>
+                    <h3>Webbutveckling e-handel</h3>
+                    <h4>Medieinstitutet</h4>
+                    <h4>2022-2024</h4>
                 </article>
-                <h3>Experience</h3>
+                <h2>Experience</h2>
                 {workListHtml}
             </section>
             <section className="resume-container__other">
-                <h3>Skills</h3>
+                <h2>Skills</h2>
                 <article className="resume-container__other__skills">
 
                     {/* Map to Display skills with hover effect */}
                     {skillsHtml}
                 </article>
-                <h3>Hobbys</h3>
+                <h2>Hobbys</h2>
                 <article className="resume-container__other__hobby">
-                    <h5>Rita</h5>
-                    <h5>Måla</h5>
-                    <h5>Koda</h5>
+                    <h4>Rita</h4>
+                    <h4>Måla</h4>
+                    <h4>Koda</h4>
 
                     {/* Hobbies: Painting, beer, illustrating - each with a small drawing */}
                 </article>
+                <h2>Other experiences</h2>
                 <article>
-                    <h3>Other experiences</h3>
-                    <h4>
-                        Lorem ipsum
-                    </h4>
-                    <h5>Lorem ipsum doloret..</h5>
-
+                    <h3>
+                        Illustratör
+                    </h3>
+                    <h4>Frilans</h4>
+                    <h4>2015-2020</h4>
+                </article>
+                <article>
+                    <h3>
+                        LSS coach
+                    </h3>
+                    <h4>Attendo UNIKA</h4>
+                    <h4>2017-2021</h4>
                 </article>
             </section>
         </section>
