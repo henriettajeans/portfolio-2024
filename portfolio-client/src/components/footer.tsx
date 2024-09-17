@@ -11,7 +11,7 @@ export const Footer = () => {
 
     return (
         <footer className="theme-background">
-            <section className=""><p>{`© ${year} Henrietta Jeansson`}</p>
+            <section><span>{`© ${year} Henrietta Jeansson`}</span>
             </section>
         </footer>
     )

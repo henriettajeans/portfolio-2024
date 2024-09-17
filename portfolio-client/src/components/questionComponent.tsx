@@ -27,8 +27,8 @@ export const QuestionComponent = () => {
     const selectedQuestion = list.find(question => question.id === openQuestionId);
 
     return (
-        <>
-            <h1 className="about-container__title">Lite om mig</h1>
+        <section className="qna-container">
+            <h1 className="">Lite om mig</h1>
             <section className="questions">
                 {questionsListHtml}
             </section>
@@ -41,6 +41,6 @@ export const QuestionComponent = () => {
             </section>
             <img src={illustration} className='illustration' alt="logo" />
 
-        </>
+        </section>
     )
 }

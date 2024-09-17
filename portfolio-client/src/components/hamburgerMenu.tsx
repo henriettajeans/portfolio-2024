@@ -40,9 +40,6 @@ export const HamburgerToggle = () => {
                     <p className="hamMenu__text">
                         <Link to="/projects" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Projekt</Link>
                     </p>
-                    <p className="hamMenu__text">
-                        <Link to="/about" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Om</Link>
-                    </p>
                 </section>
             )}
         </div>

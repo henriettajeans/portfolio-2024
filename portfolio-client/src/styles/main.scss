@@ -3,7 +3,7 @@
 @import "header.scss";
 @import "animatedLetters.scss";
 @import "resumeComponent";
-@import "about";
+@import "qnaSection";
 @import "home";
 @import "hero";
 @import "themes";
@@ -19,7 +19,7 @@ body {
   margin: 0;
   width: 100wv;
   background-color: white;
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
   .jacquarda-bastarda-9-regular {
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;

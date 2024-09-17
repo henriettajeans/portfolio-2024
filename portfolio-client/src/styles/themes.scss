@@ -3,13 +3,17 @@
 
 .dark {
   height: 100%;
-  padding-bottom: 4em;
+  // padding-bottom: 4em;
   color: $sage;
   background-color: $dark-green;
   h1 {
     color: white;
   }
-  h2,
+  h1,
+  h2 {
+    color: $grey;
+  }
+
   h3,
   h4,
   h5,
@@ -42,6 +46,13 @@
     color: white;
     background-color: $dark-green;
   }
+  .resume-container__other__skills__item {
+    border: 1px solid $grey;
+    box-shadow: 0 5px $grey;
+  }
+  .qna-container {
+    background-color: $box-green;
+  }
 
   .singleQuestion:hover {
     background-color: $sage;
@@ -63,7 +74,7 @@
 
 .light {
   height: 100%;
-  padding-bottom: 4em;
+  // padding-bottom: 4em;
   color: $expressionPurple;
   background-color: $bg-light;
   .text {
@@ -82,10 +93,11 @@
   .project-container {
     background-color: $lavendel;
   }
-  h1 {
-    color: $darkText;
+  h1,
+  h2 {
+    color: $amaranth;
   }
-  h2,
+
   h3,
   h4,
   h5,
@@ -99,6 +111,14 @@
   }
   a {
     color: $darkText;
+  }
+
+  .resume-container__other__skills__item {
+    border: 1px solid $amaranth;
+    box-shadow: 0 5px $amaranth;
+  }
+  .qna-container {
+    background-color: $lightPurple;
   }
 
   .singleProjectBtn {
