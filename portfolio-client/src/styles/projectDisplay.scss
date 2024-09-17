@@ -5,13 +5,19 @@
   padding: 3px;
   display: flex;
   flex-direction: column;
+  width: 60vw;
   .project-container {
     padding: 1em;
     margin: 0.5em;
     border-radius: 3em;
+
+    &__title {
+      font-size: 1.5em;
+    }
   }
 
   @include desktop {
+    width: 100vw;
     padding: 2.5em;
     margin: 2em;
     flex-direction: row;

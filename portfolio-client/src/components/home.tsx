@@ -1,3 +1,4 @@
+import { QuestionComponent } from './questionComponent';
 import { HeroSection } from './hero';
 import { ResumeComponent } from './resume';
 export const Home = () => {
@@ -5,6 +6,7 @@ export const Home = () => {
         <>
             <HeroSection />
             <ResumeComponent />
+            <QuestionComponent />
         </>
 
     );

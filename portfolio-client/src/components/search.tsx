@@ -75,7 +75,7 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
             <section className="projects">
                 {projects.filter(project => filterProjects([project], filters).length > 0).map(project => (
                     <div className="project-container" key={project.id}>
-                        <h1 className="project-container__title">{project.name}</h1>
+                        <h3 className="project-container__title">{project.name}</h3>
                         <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
                         <p className="myProjects--container__components__lang">{project.language}</p>
                         <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>

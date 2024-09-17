@@ -43,7 +43,7 @@ export const Project = (() => {
                 </a>
                 <h4>I projektet har följade tekniker använts: </h4>
                 <span className="project-component__flex__desc"> {project?.topics?.join(", ")}</span>
-
+                <span className="project-component__flex__desc"> {project?.homepage}</span>
             </div>
         </article>
     </>

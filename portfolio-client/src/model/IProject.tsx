@@ -8,6 +8,7 @@ export interface IProject {
     name: string;
     language: string
     description: string
+    homepage?: string
 
 }
 
@@ -19,6 +20,7 @@ export interface IRepo {
     name?: string;
     language?: string;
     description?: string
+    homepage?: string
 
 }
 export interface IProjectProp {

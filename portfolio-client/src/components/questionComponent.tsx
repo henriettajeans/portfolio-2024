@@ -3,7 +3,7 @@ import { IQuestionAndAnswers, questionAndAnswers } from "../model/questionsList"
 import illustration from "../assets/Logo.png";
 import '../styles/main.scss';
 
-export const About = () => {
+export const QuestionComponent = () => {
 
     const [list, setList] = useState<IQuestionAndAnswers[]>(questionAndAnswers);
     const [openQuestionId, setOpenQuestionId] = useState<string | null>(null);
