@@ -97,9 +97,7 @@ export const ResumeComponent = () => {
                     <h5>Attendo UNIKA</h5>
                     <h5>2017-2021</h5>
                 </article>
-                <h3>
-                    Schools
-                </h3>
+
                 <article>
 
                     <h4>Gerlesborgsskolan Stockholm</h4>
