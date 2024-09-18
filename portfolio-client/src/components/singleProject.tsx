@@ -28,6 +28,15 @@ export const Project = (() => {
         };
         getDataById();
     }, [id]);
+    const isValidUrl = (url: string) => {
+        try {
+            new URL(url);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    };
+
 
     return (<>
         <article className="project-component">
@@ -44,6 +53,17 @@ export const Project = (() => {
                 <h4>I projektet har följade tekniker använts: </h4>
                 <span className="project-component__flex__desc"> {project?.topics?.join(", ")}</span>
                 <span className="project-component__flex__desc"> {project?.homepage}</span>
+            </div>
+            <div>
+                <div>
+                    {project?.homepage && isValidUrl(project?.homepage) ? (
+                        <a href={project?.homepage} target="_blank" rel="noopener noreferrer">
+                            Click here to see a live version
+                        </a>
+                    ) : (
+                        <p>No live version available</p>
+                    )}
+                </div>
             </div>
         </article>
     </>

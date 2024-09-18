@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { IWorkExperience, workExperience } from "../model/workEx";
 import '../styles/main.scss';
+import sudoku from "../assets/hobby_sudoku.png";
+import paint from "../assets/hobby_paint.png";
+import write from "../assets/hobby_write.png";
 
 
 export const ResumeComponent = () => {
@@ -36,6 +39,8 @@ export const ResumeComponent = () => {
         <span className="resume-container__other__skills__item" key={index}>
             {skill}
         </span>
+
+
     ));
     return (
         <section className="resume-container">
@@ -60,9 +65,20 @@ export const ResumeComponent = () => {
                 </article>
                 <h2>Hobbys</h2>
                 <article className="resume-container__other__hobby">
-                    <h4>Rita</h4>
-                    <h4>Måla</h4>
-                    <h4>Koda</h4>
+                    <div>
+                        <img src={paint} className="resume-container__other__hobby__img"></img>
+                        <h4>Måla</h4>
+                    </div>
+                    <div>
+                        <img src={sudoku} className="resume-container__other__hobby__img"></img>
+                        <h4>Sudoku</h4>
+                    </div>
+
+                    <div>
+                        <img src={write} className="resume-container__other__hobby__img"></img>
+                        <h4>Skriva</h4>
+                    </div>
+
 
                     {/* Hobbies: Painting, beer, illustrating - each with a small drawing */}
                 </article>

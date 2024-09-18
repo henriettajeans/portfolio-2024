@@ -50,6 +50,11 @@
     border: 1px solid $grey;
     box-shadow: 0 5px $grey;
   }
+
+  .resume-container__other__hobby__img {
+    border: 1px solid $grey;
+    box-shadow: 0 5px $grey;
+  }
   .qna-container {
     background-color: $box-green;
   }
@@ -114,6 +119,10 @@
   }
 
   .resume-container__other__skills__item {
+    border: 1px solid $amaranth;
+    box-shadow: 0 5px $amaranth;
+  }
+  .resume-container__other__hobby__img {
     border: 1px solid $amaranth;
     box-shadow: 0 5px $amaranth;
   }

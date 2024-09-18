@@ -35,6 +35,15 @@
         // margin-top: 6px;
       }
     }
+    &__hobby {
+      display: flex;
+      gap: 1em;
+      &__img {
+        width: 80px;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
   }
 
   @include tablet {
