@@ -28,7 +28,8 @@ body {
 
   h1,
   h2 {
-    font-family: "Jacquarda Bastarda 9", serif;
+    font-family: "RoughTagline";
+
     font-size: 3em;
   }
   h3,
@@ -97,5 +98,11 @@ body {
     @include desktop {
       height: 600px;
     }
+  }
+  @font-face {
+    font-family: "RoughTagline";
+    src: local("RoughTagline"),
+      url("../assets/fonts/RoughTagline.ttf") format("truetype");
+    font-weight: bold;
   }
 }

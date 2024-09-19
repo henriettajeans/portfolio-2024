@@ -67,7 +67,7 @@ export const ResumeComponent = () => {
                 <article className="resume-container__other__hobby">
                     <div>
                         <img src={paint} className="resume-container__other__hobby__img"></img>
-                        <h4>Måla</h4>
+                        <h4>Måleri</h4>
                     </div>
                     <div>
                         <img src={sudoku} className="resume-container__other__hobby__img"></img>
@@ -76,7 +76,7 @@ export const ResumeComponent = () => {
 
                     <div>
                         <img src={write} className="resume-container__other__hobby__img"></img>
-                        <h4>Skriva</h4>
+                        <h4>Skrivkonst</h4>
                     </div>
 
 
