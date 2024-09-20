@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { IFilterObjects, IProject } from "../model/IProject";
 import { Topics, TOPICS } from "../model/filterType";
 import { Link } from "react-router-dom";
+import Modal from "./projectModal";
 
 
 export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, setFilteredProjects: React.Dispatch<React.SetStateAction<IProject[]>> }> = ({ projects, filters, setFilteredProjects }) => {
     const [searchTerm, setSearchTerm] = useState(filters.searchTerm);
     const [selectedTopics, setSelectedTopics] = useState<Topics[]>(filters.topics);
+    const [showModal, setShowModal] = useState<boolean>(false);
 
     const filterProjects = (projects: IProject[], filters: IFilterObjects): IProject[] => {
 
@@ -46,6 +48,10 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
         setFilteredProjects(filtered);
     }, [projects, searchTerm, selectedTopics, filters, setFilteredProjects]);
 
+    function toggleModal() {
+        setShowModal(!showModal);
+    }
+
     return (
         <>
             <article className="filter-container">
@@ -74,10 +80,17 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
                         <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
                         <p className="myProjects--container__components__lang">{project.language}</p>
                         <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
+                        <button type="button" className="btn" onClick={toggleModal}>Open</button>
                     </div>
+
                 ))}
 
             </section>
+            <Modal open={showModal} onClose={toggleModal}>
+                <div>
+                    Main Content goes here!
+                </div>
+            </Modal>
         </>
 
     )

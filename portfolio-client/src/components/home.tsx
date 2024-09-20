@@ -7,6 +7,7 @@ export const Home = () => {
             <HeroSection />
             <ResumeComponent />
             <QuestionComponent />
+
         </>
 
     );

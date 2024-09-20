@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { GroupProject, HobbyProject, SortOption, Topics } from "./filterType";
 
 export interface IProject {
@@ -39,4 +40,9 @@ export interface ISearchProps {
     projects: IProject[];
     filters: IFilterObjects;
     setFilteredProjects: React.Dispatch<React.SetStateAction<IProject[]>>;
+}
+export interface IModalProps {
+    open: boolean;
+    onClose: () => void;
+    children: ReactElement;
 }

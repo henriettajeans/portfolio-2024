@@ -47,24 +47,23 @@ export const Project = (() => {
 
                 <h4 className="project-component__flex__desctitle">Beskrivning av projektet</h4>
                 <p className="project-component__flex__desc">{project?.description}</p>
-                <a href={project?.html_url} className="project-component__flex__url__link">
-                    Se repot på github <VscGithub />
-                </a>
-                <h4>I projektet har följade tekniker använts: </h4>
-                <span className="project-component__flex__desc"> {project?.topics?.join(", ")}</span>
-                <span className="project-component__flex__desc"> {project?.homepage}</span>
-            </div>
-            <div>
                 <div>
                     {project?.homepage && isValidUrl(project?.homepage) ? (
                         <a href={project?.homepage} target="_blank" rel="noopener noreferrer">
-                            Click here to see a live version
+                            Klicka för att se live!
                         </a>
                     ) : (
-                        <p>No live version available</p>
+                        <p>Det här projektet har ingen liveversion</p>
                     )}
                 </div>
+
+                <h4>I projektet har följade tekniker använts: </h4>
+                <span className="project-component__flex__desc"> {project?.topics?.join(", ")}</span>
+                <a href={project?.html_url} className="project-component__flex__url__link">
+                    Se koden på <VscGithub />
+                </a>
             </div>
+
         </article>
     </>
     );

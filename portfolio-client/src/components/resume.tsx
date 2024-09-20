@@ -59,8 +59,6 @@ export const ResumeComponent = () => {
             <section className="resume-container__other">
                 <h2>Skills</h2>
                 <article className="resume-container__other__skills">
-
-                    {/* Map to Display skills with hover effect */}
                     {skillsHtml}
                 </article>
                 <h2>Hobbys</h2>
@@ -79,8 +77,7 @@ export const ResumeComponent = () => {
                         <h4>Skrivkonst</h4>
                     </div>
 
-
-                    {/* Hobbies: Painting, beer, illustrating - each with a small drawing */}
+                    {/* TODO: Add resume download button */}
                 </article>
                 <h2>Other experiences</h2>
                 <article>
