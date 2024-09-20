@@ -33,7 +33,7 @@ export const Projects = () => {
 
     return (<>
 
-        <h1 className="myProjects--title__text">Projects</h1>
+        <h1>Projects</h1>
         <Search projects={projects} filters={filters} setFilteredProjects={setFilteredProjects} />
 
 

@@ -75,6 +75,14 @@
   a {
     color: $special-dark;
   }
+  .filter-container {
+    border-top: 3px solid $box-green;
+    border-bottom: 2px solid $box-green;
+    &__item {
+      background-color: $grey;
+      color: $dark-green;
+    }
+  }
 }
 
 .light {
@@ -147,5 +155,13 @@
   }
   .themeBtn {
     color: $sage;
+  }
+  .filter-container {
+    border-top: 3px solid $amaranth;
+    border-bottom: 2px solid $amaranth;
+    &__item {
+      background-color: $lightBgBase;
+      color: $expressionPurple;
+    }
   }
 }

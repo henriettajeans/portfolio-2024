@@ -48,26 +48,21 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
 
     return (
         <>
-            <article>
-                <input
+            <article className="filter-container">
+                <input className="filter-container__item"
                     id="searchTerm"
                     placeholder="Sök..."
                     type="text"
                     value={searchTerm}
                     onChange={handleSearchTermChange}
                 />
-            </article>
-            <article>
-                <select
+                <select className="filter-container__item"
                     id="topics"
                     value={selectedTopics[0] || ""}
                     onChange={handleTopicChange}
-
                 >
                     {TOPICS.map(topic => (
-
                         <option key={topic} value={topic}>{topic} </option>
-
                     ))}
                     <option value="">Välj en teknik</option>
                 </select>

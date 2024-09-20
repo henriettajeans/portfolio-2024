@@ -1,0 +1,24 @@
+/** @format */
+
+@import "variables";
+@import "mixins";
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__item {
+    width: 8em;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  @include tablet {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__item {
+      width: 20em;
+    }
+  }
+}
