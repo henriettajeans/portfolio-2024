@@ -1,23 +1,18 @@
-import { FC } from "react";
-import { IModalProps } from "../model/IProject";
+
+import { ModalProps } from "../model/IProject";
 import "../styles/singleProject.scss";
 
-export default function Modal(props: IModalProps): ReturnType<FC> {
+export const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
+    if (!open) return null; // Only render if `open` is true
+
     return (
-        <div
-            className={`${"modal"} ${props.open ? "display-block" : "display-none"}`}
-        >
-            <div className="modal-main">
-                <div className="modal-head">
-                    <h1>Modal</h1>
-                </div>
-                <div className="modal-body">{props.children}</div>
-                <div className="btn-container">
-                    <button type="button" className="btn" onClick={props.onClose}>
-                        Close
-                    </button>
-                </div>
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}> {/* Prevent modal click from closing it */}
+                <button className="modal-close-btn" onClick={onClose}>
+                    &times; {/* Close button (X) */}
+                </button>
+                {children} {/* The modal content will be rendered here */}
             </div>
         </div>
     );
-}
+};

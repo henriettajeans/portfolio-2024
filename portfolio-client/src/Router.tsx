@@ -3,7 +3,6 @@ import App from "./App";
 import { QuestionComponent } from "./components/questionComponent";
 import { Home } from "./components/home";
 import { Projects } from "./components/projectDisplays";
-import { Project } from "./components/singleProject";
 import { NotFound } from "./components/404";
 
 export const router = createBrowserRouter([
@@ -23,10 +22,6 @@ export const router = createBrowserRouter([
             {
                 path: '/projects',
                 element: <Projects />,
-            },
-            {
-                path: '/project/:id',
-                element: <Project />
             },
             {
                 path: "*",

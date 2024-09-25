@@ -1,33 +1,38 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { IRepo } from "../model/IProject";
+import { IRepo, ProjectProps } from "../model/IProject";
 import { GetRepoById } from "../controller/getProject";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { VscGithub } from "react-icons/vsc";
 
 
 
-export const Project = (() => {
+export const Project: React.FC<ProjectProps> = ({ project, onClose }) => {
 
-    const [project, setProject] = useState<IRepo>();
-    const { id } = useParams();
-    const navigate = useNavigate();
+    const [singleProject, setSingleProject] = useState<IRepo>();
+    // const { id } = useParams();
+    // const navigate = useNavigate();
 
-    const getBack = () => {
-        navigate(`/projects`);
-    };
-
+    // const getBack = () => {
+    //     navigate(`/projects`);
+    // };
 
     useEffect(() => {
-        const getDataById = async () => {
-            if (id) {
-                let response = await GetRepoById(id!);
-                setProject(response);
-            }
-        };
-        getDataById();
-    }, [id]);
+        if (project) {
+            setSingleProject(project);
+        }
+    }, [project]);
+    // useEffect(() => {
+    //     const getDataById = async () => {
+    //         if (id) {
+    //             let response = await GetRepoById(id!);
+    //             setProject(response);
+    //         }
+    //     };
+    //     getDataById();
+    // }, [id]);
+
     const isValidUrl = (url: string) => {
         try {
             new URL(url);
@@ -40,16 +45,17 @@ export const Project = (() => {
 
     return (<>
         <article className="project-component">
-            <button onClick={getBack} className="singleProjectBtn"> <RiArrowGoBackFill /> </button>
+            <button onClick={onClose} className="singleProjectBtn">Close</button>
+            {/* <button onClick={getBack} className="singleProjectBtn"> <RiArrowGoBackFill /> </button> */}
 
-            <h2 className="project-component__title">{project?.name}</h2>
+            <h2 className="project-component__title">{singleProject?.name}</h2>
             <div className="project-component__flex">
 
                 <h4 className="project-component__flex__desctitle">Beskrivning av projektet</h4>
-                <p className="project-component__flex__desc">{project?.description}</p>
+                <p className="project-component__flex__desc">{singleProject?.description}</p>
                 <div>
-                    {project?.homepage && isValidUrl(project?.homepage) ? (
-                        <a href={project?.homepage} target="_blank" rel="noopener noreferrer">
+                    {singleProject?.homepage && isValidUrl(singleProject?.homepage) ? (
+                        <a href={singleProject?.homepage} target="_blank" rel="noopener noreferrer">
                             Klicka för att se live!
                         </a>
                     ) : (
@@ -58,13 +64,15 @@ export const Project = (() => {
                 </div>
 
                 <h4>I projektet har följade tekniker använts: </h4>
-                <span className="project-component__flex__desc"> {project?.topics?.join(", ")}</span>
-                <a href={project?.html_url} className="project-component__flex__url__link">
+                <span className="project-component__flex__desc"> {singleProject?.topics?.join(", ")}</span>
+                <a href={singleProject?.html_url} className="project-component__flex__url__link">
                     Se koden på <VscGithub />
                 </a>
             </div>
 
         </article>
+
+
     </>
     );
-})
+}

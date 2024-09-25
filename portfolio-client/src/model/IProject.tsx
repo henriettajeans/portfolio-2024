@@ -41,8 +41,13 @@ export interface ISearchProps {
     filters: IFilterObjects;
     setFilteredProjects: React.Dispatch<React.SetStateAction<IProject[]>>;
 }
-export interface IModalProps {
+export interface ProjectProps {
+    project: IRepo;
+    onClose: () => void;
+
+}
+export interface ModalProps {
     open: boolean;
     onClose: () => void;
-    children: ReactElement;
+    children: React.ReactNode;
 }
