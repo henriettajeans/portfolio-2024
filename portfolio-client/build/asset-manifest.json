@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1a015efa.css",
+    "main.js": "/static/js/main.138e224e.js",
+    "static/js/453.eadd3917.chunk.js": "/static/js/453.eadd3917.chunk.js",
+    "static/media/Henrietta-portfolio.png": "/static/media/Henrietta-portfolio.fcbc325713f21f5cdd60.png",
+    "static/media/hobby_sudoku.png": "/static/media/hobby_sudoku.b87c8b1e73b590caa337.png",
+    "static/media/Logo.png": "/static/media/Logo.4798cb2335da11c084c0.png",
+    "static/media/hobby_write.png": "/static/media/hobby_write.0d938531f8a3878612fb.png",
+    "static/media/hobby_paint.png": "/static/media/hobby_paint.bc9f0e6283b08a5b1b3c.png",
+    "static/media/RoughTagline.ttf": "/static/media/RoughTagline.86ab02d92001088263ff.ttf",
+    "index.html": "/index.html",
+    "main.1a015efa.css.map": "/static/css/main.1a015efa.css.map",
+    "main.138e224e.js.map": "/static/js/main.138e224e.js.map",
+    "453.eadd3917.chunk.js.map": "/static/js/453.eadd3917.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a015efa.css",
+    "static/js/main.138e224e.js"
+  ]
+}
