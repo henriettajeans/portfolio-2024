@@ -5,7 +5,7 @@ import '../styles/main.scss';
 
 export const QuestionComponent = () => {
 
-    const [list, setList] = useState<IQuestionAndAnswers[]>(questionAndAnswers);
+    const [list] = useState<IQuestionAndAnswers[]>(questionAndAnswers);
     const [openQuestionId, setOpenQuestionId] = useState<string | null>(null);
 
     const handleToggle = (id: string) => {

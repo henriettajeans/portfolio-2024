@@ -7,7 +7,7 @@ import write from "../assets/hobby_write.png";
 
 
 export const ResumeComponent = () => {
-    const [workList, setWorkList] = useState<IWorkExperience[]>(workExperience);
+    const [workList] = useState<IWorkExperience[]>(workExperience);
 
     const skills = ["Typescript", "Wordpress", "PHP", "Web design", "API integration", "Sass", "Team work", "Social media strategy"];
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IFilterObjects, IProject, IRepo } from "../model/IProject";
 import { Topics, TOPICS } from "../model/filterType";
 import { Link } from "react-router-dom";
@@ -13,18 +13,15 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
     const [showModal, setShowModal] = useState<boolean>(false);
     const [selectedProject, setSelectedProject] = useState<IRepo | null>(null);
 
-    const filterProjects = (projects: IProject[], filters: IFilterObjects): IProject[] => {
-
-
+    const filterProjects = useCallback((projects: IProject[], filters: IFilterObjects): IProject[] => {
         return projects.filter(item => {
             const matchesSearchTerm = item.name.toLowerCase().includes(searchTerm.toLowerCase());
             const matchesTopics = selectedTopics.length === 0 || selectedTopics.some(filterTopic =>
                 item.topics.includes(filterTopic)
             );
-
             return matchesSearchTerm && matchesTopics;
         });
-    };
+    }, [searchTerm, selectedTopics]);
     const handleSearchTermChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
@@ -49,7 +46,7 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
     useEffect(() => {
         const filtered = filterProjects(projects, { ...filters, searchTerm, topics: selectedTopics });
         setFilteredProjects(filtered);
-    }, [projects, searchTerm, selectedTopics, filters, setFilteredProjects]);
+    }, [projects, searchTerm, selectedTopics, filters, filterProjects, setFilteredProjects]);
 
     function openModal(project: IProject) {
         setSelectedProject(project); // Set the selected project
