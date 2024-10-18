@@ -8,25 +8,18 @@ import { MdOutlineSwitchAccessShortcut } from "react-icons/md";
 import './App.scss';
 
 function App() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <ThemeProvider>
-      <div className={theme}  >
-        <header className="header">
-          <div className='theme-button'>
-            <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-              <MdOutlineSwitchAccessShortcut /> VÄLJ PINK O GREEN
-            </button>
-          </div>
-          <Header />
-        </header>
-        <main className='background'>
-          <Outlet />
-        </main>
-        <Footer />
-      </div >
-    </ThemeProvider >
+    <div className={theme}  >
+
+
+      <Header />
+      <main className='background'>
+        <Outlet />
+      </main>
+      <Footer />
+    </div >
   );
 }
 
