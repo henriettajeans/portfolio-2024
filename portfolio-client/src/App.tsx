@@ -13,24 +13,21 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className={theme}>
+      <div className={theme}  >
         <header className="header">
+          <div className='theme-button'>
+            <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+              <MdOutlineSwitchAccessShortcut />
+            </button>
+          </div>
           <Header />
+
 
         </header>
         <main className='background'>
           <Outlet />
-          <div className='theme-button'>
-
-            <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-              <MdOutlineSwitchAccessShortcut />
-            </button>
-
-          </div>
         </main>
-
         <Footer />
-
       </div >
     </ThemeProvider >
   );

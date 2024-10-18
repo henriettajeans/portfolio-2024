@@ -1,9 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
 import { IRepo, ProjectProps } from "../model/IProject";
-import { GetRepoById } from "../controller/getProject";
-import { RiArrowGoBackFill } from "react-icons/ri";
 import { VscGithub } from "react-icons/vsc";
 
 
@@ -11,27 +8,12 @@ import { VscGithub } from "react-icons/vsc";
 export const Project: React.FC<ProjectProps> = ({ project, onClose }) => {
 
     const [singleProject, setSingleProject] = useState<IRepo>();
-    // const { id } = useParams();
-    // const navigate = useNavigate();
-
-    // const getBack = () => {
-    //     navigate(`/projects`);
-    // };
 
     useEffect(() => {
         if (project) {
             setSingleProject(project);
         }
     }, [project]);
-    // useEffect(() => {
-    //     const getDataById = async () => {
-    //         if (id) {
-    //             let response = await GetRepoById(id!);
-    //             setProject(response);
-    //         }
-    //     };
-    //     getDataById();
-    // }, [id]);
 
     const isValidUrl = (url: string) => {
         try {

@@ -84,10 +84,8 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
                         <h3 className="project-container__title">{project.name}</h3>
                         <span className="myProjects--container__components__created">Skapades {formatDate(project.created_at)}</span>
                         <p className="myProjects--container__components__lang">{project.language}</p>
-                        <Link to={`/project/${project.id}`} className="myProjects--container__components__btn">Beskrivning projektet</Link>
                         <button type="button" className="btn" onClick={() => openModal(project)}>Open</button> {/* Pass the selected project */}
                     </div>
-
                 ))}
 
             </section>
