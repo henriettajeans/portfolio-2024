@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useState } from 'react';
+import React, { createContext, ReactNode, useContext, useState } from 'react';
 
 interface ThemeContextType {
     theme: string;
@@ -19,3 +19,4 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         </ThemeContext.Provider>
     )
 }
+export const useTheme = () => useContext(ThemeContext);
