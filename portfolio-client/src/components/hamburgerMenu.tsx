@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { Link } from "react-router-dom"
 import '../styles/header.scss';
 
 export const HamburgerToggle = () => {
@@ -23,26 +22,9 @@ export const HamburgerToggle = () => {
         };
     }, [toggleForm]);
 
-    const handleLinkClick = () => {
-        setToggleForm(false);
-    };
+
     return (
-        <div className="hamMenu" ref={menuRef}>
-            {/* <button className="hamMenu-btn" onClick={() => setToggleForm(!toggleForm)}> <IoMenu />
-            </button>
-
-            {toggleForm && ( */}
-            <section className="menu-items">
-
-                <p className="hamMenu__text">
-                    <Link to="/" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Hem</Link>
-                </p>
-                <p className="hamMenu__text">
-                    <Link to="/projects" className="nav-container__flex__list__item__link" onClick={handleLinkClick}>Projekt</Link>
-                </p>
-
-            </section>
-            {/* )} */}
-        </div>
+        <>
+        </>
     );
 }

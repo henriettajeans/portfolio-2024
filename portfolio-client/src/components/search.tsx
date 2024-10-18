@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { IFilterObjects, IProject, IRepo } from "../model/IProject";
 import { Topics, TOPICS } from "../model/filterType";
-import { Link } from "react-router-dom";
 import { Modal } from "./projectModal";
 import { Project } from "./singleProject";
 
@@ -59,6 +58,7 @@ export const Search: React.FC<{ projects: IProject[], filters: IFilterObjects, s
 
     return (
         <>
+
             <article className="filter-container">
                 <input className="filter-container__item"
                     id="searchTerm"

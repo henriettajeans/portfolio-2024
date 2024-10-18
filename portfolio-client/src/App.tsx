@@ -17,12 +17,10 @@ function App() {
         <header className="header">
           <div className='theme-button'>
             <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-              <MdOutlineSwitchAccessShortcut />
+              <MdOutlineSwitchAccessShortcut /> VÄLJ PINK O GREEN
             </button>
           </div>
           <Header />
-
-
         </header>
         <main className='background'>
           <Outlet />
