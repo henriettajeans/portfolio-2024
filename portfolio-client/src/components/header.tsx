@@ -9,11 +9,13 @@ const Header: FC = () => {
     const { theme, setTheme } = useTheme();
     return (
         <header className="header">
-            <div className='theme-button'>
-                <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-                    VÄLJ PINK O GREEN
-                </button>
-            </div>
+            <nav>
+                <div className='theme-button'>
+                    <button className="themeBtn" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                        VÄLJ PINK O GREEN
+                    </button>
+                </div>
+            </nav>
         </header>
 
     );
