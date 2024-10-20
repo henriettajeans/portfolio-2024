@@ -64,16 +64,16 @@ export const ResumeComponent = () => {
                 <h2>Hobbys</h2>
                 <article className="resume-container__other__hobby">
                     <div>
-                        <img src={paint} className="resume-container__other__hobby__img"></img>
+                        <img src={paint} alt="skill" className="resume-container__other__hobby__img"></img>
                         <h4>Måleri</h4>
                     </div>
                     <div>
-                        <img src={sudoku} className="resume-container__other__hobby__img"></img>
+                        <img src={sudoku} alt="skill" className="resume-container__other__hobby__img"></img>
                         <h4>Sudoku</h4>
                     </div>
 
                     <div>
-                        <img src={write} className="resume-container__other__hobby__img"></img>
+                        <img src={write} alt="skill" className="resume-container__other__hobby__img"></img>
                         <h4>Skrivkonst</h4>
                     </div>
 
