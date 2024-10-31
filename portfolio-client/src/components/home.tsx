@@ -6,9 +6,6 @@ import { About } from './about';
 export const Home = () => {
     return (
         <>
-            <p>
-                <Link to="/projects" className="nav-container__flex__list__item__link" >Projekt</Link>
-            </p>
             <HeroSection />
             <About />
             <ResumeComponent />

@@ -1,7 +1,8 @@
 export const About = () => {
 
     return (
-        <><h2>Henrietta Jeansson</h2>
+        <section id="aboutme">
+            <h2>Henrietta Jeansson</h2>
             <span>
 
             </span>
@@ -11,6 +12,6 @@ export const About = () => {
             <span>
 
             </span>
-        </>
+        </section>
     );
 };

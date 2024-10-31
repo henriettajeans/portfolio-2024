@@ -1,15 +1,29 @@
 /** @format */
 @import "mixins";
 
-.header {
-  .menu-items {
+header {
+  nav {
     display: flex;
     flex-direction: row;
-    gap: 1em;
-    position: fixed;
-    border-radius: 10%;
-    right: 3px;
-    top: 10px;
-    padding: 3em;
+    align-items: center;
+    justify-content: space-evenly;
+    // .menu-items {
+    //   display: flex;
+    //   flex-direction: row;
+    //   gap: 1em;
+    //   position: fixed;
+    //   border-radius: 10%;
+    //   right: 3px;
+    //   top: 10px;
+    //   padding: 3em;
+    // }
+  }
+  .theme-button {
+    position: fixed; //TODO: Change
+    padding: 1em;
+    border: none;
+    padding: 0.8em;
+    border-radius: 1em;
+    left: 1px;
   }
 }

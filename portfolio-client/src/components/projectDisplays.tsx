@@ -33,9 +33,6 @@ export const Projects = () => {
 
 
     return (<>
-        <p>
-            <Link to="/" className="nav-container__flex__list__item__link" >Hem</Link>
-        </p>
         <h1>Projects</h1>
         <Search projects={projects} filters={filters} setFilteredProjects={setFilteredProjects} />
 
