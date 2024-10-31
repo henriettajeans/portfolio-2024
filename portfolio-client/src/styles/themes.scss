@@ -4,6 +4,9 @@
 .dark {
   color: $sage;
   background-color: $dark-green;
+  nav {
+    background-color: $sage;
+  }
   h1 {
     color: white;
   }
@@ -86,6 +89,9 @@
 .light {
   color: $expressionPurple;
   background-color: $bg-light;
+  nav {
+    background-color: $lightBgBase;
+  }
   .text {
     color: $statementBlue;
     background-color: $lightBgBase;

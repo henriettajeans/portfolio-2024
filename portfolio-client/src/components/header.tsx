@@ -11,10 +11,11 @@ const Header: FC = () => {
 
     return (
         <header>
-            <button className="theme-button nav-button " onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-                SWITCH
-            </button>
+
             <nav>
+                <button className="theme-button nav-button " onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                    SWITCH
+                </button>
 
                 {location.pathname === '/' ? (
                     <Link to="/projects" className="nav-button">
